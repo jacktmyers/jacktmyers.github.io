@@ -1985,7 +1985,7 @@ input, select, textarea {
 			input[type="button"].primary:active,
 			button.primary:active,
 			.button.primary:active {
-				background-color: #3089e2;
+				background-color: #b6533b;
 			}
 
 /* Form */
@@ -3192,7 +3192,7 @@ input, select, textarea {
 					.wrapper.style2 input[type="button"].primary:active,
 					.wrapper.style2 button.primary:active,
 					.wrapper.style2 .button.primary:active {
-						background-color: #3089e2;
+						background-color: #b6533b;
 					}
 
 			.wrapper.style2 label {
