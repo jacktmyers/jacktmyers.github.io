@@ -3036,27 +3036,27 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
-				color: #b5d5f5 !important;
+				color: #e2cccc !important;
 			}
 
 			.wrapper.style1 :-moz-placeholder {
-				color: #b5d5f5 !important;
+				color: #e2cccc !important;
 			}
 
 			.wrapper.style1 ::-moz-placeholder {
-				color: #b5d5f5 !important;
+				color: #e2cccc !important;
 			}
 
 			.wrapper.style1 :-ms-input-placeholder {
-				color: #b5d5f5 !important;
+				color: #e2cccc !important;
 			}
 
 			.wrapper.style1 .formerize-placeholder {
-				color: #b5d5f5 !important;
+				color: #e2cccc !important;
 			}
 
 			.wrapper.style1 .icon {
-				color: #b5d5f5;
+				color: #e2cccc;
 			}
 
 			.wrapper.style1 .image {
@@ -3614,7 +3614,7 @@ input, select, textarea {
 
 	#header {
 		background-color: #d38282;
-		color: #d1e5f9;
+		color: #f1e1e1;
 		padding: 4.5em 0 2.5em 0 ;
 		-moz-align-items: center;
 		-webkit-align-items: center;
@@ -3732,27 +3732,27 @@ input, select, textarea {
 		}
 
 		#header ::-webkit-input-placeholder {
-			color: #b5d5f5 !important;
+			color: #e2cccc !important;
 		}
 
 		#header :-moz-placeholder {
-			color: #b5d5f5 !important;
+			color: #e2cccc !important;
 		}
 
 		#header ::-moz-placeholder {
-			color: #b5d5f5 !important;
+			color: #e2cccc !important;
 		}
 
 		#header :-ms-input-placeholder {
-			color: #b5d5f5 !important;
+			color: #e2cccc !important;
 		}
 
 		#header .formerize-placeholder {
-			color: #b5d5f5 !important;
+			color: #e2cccc !important;
 		}
 
 		#header .icon {
-			color: #b5d5f5;
+			color: #e2cccc;
 		}
 
 		#header .image {
