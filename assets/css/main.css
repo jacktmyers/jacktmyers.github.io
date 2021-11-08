@@ -4171,7 +4171,8 @@ input, select, textarea {
 		justify-content: center;
 	}
 
-	@media screen and (max-width: 1500px) {
+	@media screen and (max-width: 1500px),
+		screen and (max-device-width: 1500px){
 		.show-mobile {
 		  display: block;
 		}
@@ -4191,7 +4192,8 @@ input, select, textarea {
 	  	}
 
 
-	@media screen and (min-width: 1501px) {
+	@media screen and (min-width: 1501px),
+		screen and (min-device-width: 1501px){
 	.show-mobile {
 	  display: none;
 	}
