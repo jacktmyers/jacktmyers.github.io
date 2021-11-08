@@ -4202,7 +4202,7 @@ input, select, textarea {
 			display: inline-block; 
 		}
 	  	}
-	@media not screen and (min-width: 1501px), screen and (min-device-width: 1501px){
+	@media not screen and (min-width: 1501px), not screen and (min-device-width: 1501px){
 	  .show-mobile {
 		display: none;
 	  }
