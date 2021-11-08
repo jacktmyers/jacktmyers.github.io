@@ -4183,8 +4183,8 @@ input, select, textarea {
 		justify-content: center;
 	}
 
-	@media screen and (max-width: 1500px),
-		screen and (max-device-width: 1500px){
+	@media screen and (max-width: 1400px),
+		screen and (max-device-width: 1400px){
 		.show-mobile {
 		  display: block;
 		}
@@ -4202,7 +4202,7 @@ input, select, textarea {
 			display: inline-block; 
 		}
 	  	}
-	@media not screen and (min-width: 1501px), not screen and (min-device-width: 1501px){
+	@media not screen and (max-width: 1400px), screen and (max-device-width: 1400px){
 	  .show-mobile {
 		display: none;
 	  }
