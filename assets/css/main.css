@@ -4164,14 +4164,14 @@ input, select, textarea {
 	#gallery a img { display: block; border: 0; }
 	#gallery .image{
 		border-radius: 10px;
-		box-shadow: 0 0 0 8px #ffffff, 0 0 11px 10px #e6e6e6;
+		box-shadow: 0 0 0 8px #ffffff, 0 0 12px 12px #adadad9d;
 	}
 	#gallery li {
 		padding-left: 4em;
 		justify-content: center;
 	}
 
-	@media only screen and (max-device-width: 700px) {
+	@media screen and (max-width: 1500px) {
 		.show-mobile {
 		  display: block;
 		}
@@ -4179,20 +4179,19 @@ input, select, textarea {
 		  display: none;
 		}
 		#gallery .image{
-			padding:0;
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-			width: 50%;
+			right: 5%;
+			left: 5%;
+			height: auto;
+			border-radius: 0px;
+			box-shadow: 0 0 0 0;
 		}
-		#gallery .mobileGallery {
-			display: flex;
-			justify-content: center;
+		#gallery ul{
+			display: inline-block; 
 		}
 	  	}
 
 
-	@media only screen and (min-device-width: 701px) {
+	@media screen and (min-width: 1501px) {
 	.show-mobile {
 	  display: none;
 	}
