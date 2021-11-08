@@ -4179,10 +4179,15 @@ input, select, textarea {
 		  display: none;
 		}
 		#gallery .image{
+			padding:0;
 			display: block;
 			margin-left: auto;
 			margin-right: auto;
 			width: 50%;
+		}
+		#gallery .mobileGallery {
+			display: flex;
+			justify-content: center;
 		}
 	  	}
 
