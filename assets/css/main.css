@@ -4171,6 +4171,30 @@ input, select, textarea {
 		justify-content: center;
 	}
 
+	@media only screen and (max-device-width: 700px) {
+		.show-mobile {
+		  display: block;
+		}
+		.hide-mobile {
+		  display: none;
+		}
+		#gallery .image{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		}
+	  	}
+
+
+	@media only screen and (min-device-width: 701px) {
+	.show-mobile {
+	  display: none;
+	}
+	.hide-mobile {
+	  display: block;
+	}
+	}
 
 	@media screen and (max-width: 980px) {
 
@@ -4191,9 +4215,9 @@ input, select, textarea {
 			display: none;
 		}
 
-		.poptrox-popup .caption {
+		/*.poptrox-popup .caption {
 			display: none !important;
-		}
+		}*/
 
 		.poptrox-popup .closer,
 		.poptrox-popup .nav-previous,
