@@ -4202,20 +4202,18 @@ input, select, textarea {
 			display: inline-block; 
 		}
 	  	}
-
-
-	@media screen and (min-width: 1501px),
-		screen and (min-device-width: 1501px){
-	.show-mobile {
-	  display: none;
-	}
-	.hide-mobile {
-	  display: block;
-	}
-	#gallery li{
+	@media not screen and (min-width: 1501px), screen and (min-device-width: 1501px){
+	  .show-mobile {
+		display: none;
+	  }
+	  .hide-mobile {
 		display: block;
-	}
-	}
+	  }
+	  #gallery li{
+		  display: block;
+	  }
+	  }
+
 
 	@media screen and (max-width: 980px) {
 
