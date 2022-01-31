@@ -65,10 +65,6 @@
         var _this = this;
         var zoomIcons = '<button type="button" aria-label="Zoom in" id="lg-zoom-in" class="lg-icon"></button><button type="button" aria-label="Zoom out" id="lg-zoom-out" class="lg-icon"></button>';
 
-        if (_this.core.s.actualSize) {
-            zoomIcons += '<button type="button" aria-label="Actual size" id="lg-actual-size" class="lg-icon"></button>';
-        }
-
         if (_this.core.s.useLeftForZoom) {
             _this.core.$outer.addClass('lg-use-left-for-zoom');
         } else {
@@ -229,10 +225,6 @@
                 scale += _this.core.s.scale;
                 callScale();
             }
-        });
-
-        $('#lg-actual-size').on('click.lg', function(event) {
-            actualSize(event, _this.core.$slide.eq(_this.core.index).find('.lg-image'), _this.core.index, true);
         });
 
         // Reset zoom on slide change
