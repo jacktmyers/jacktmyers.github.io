@@ -1,15 +1,140 @@
 @font-face {
   font-family: imbVga;
   src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff"); }
+a:link {
+  color: #ffa4a4; }
+
+a:hover {
+  color: white; }
+
+a:visited {
+  color: #ffa4a4; }
+
+a:visited:hover {
+  color: white; }
+
+a:active {
+  color: white; }
+
 body {
   font-family: imbVga;
   color: white;
   background-color: black; }
-  body img {
-    display: flex;
+
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden; }
+
+#homeBar {
+  display: block;
+  border-bottom: 4px solid;
+  margin: 0;
+  height: 6%;
+  margin-top: 5px;
+  padding-bottom: 5px; }
+  #homeBar img {
+    display: block;
     margin-left: auto;
     margin-right: auto;
     image-rendering: pixelated;
-    width: 30%; }
+    height: 100%; }
+
+#footerBar {
+  display: flex;
+  border-top: 4px solid;
+  margin: 0;
+  height: 6%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  position: fixed;
+  top: 100%;
+  transform: translate(0%, -100%);
+  flex-direction: row;
+  width: 100%; }
+  #footerBar #sourceCode {
+    margin-left: 7px;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px; }
+    #footerBar #sourceCode p {
+      display: flex;
+      align-items: center; }
+    #footerBar #sourceCode a {
+      display: flex;
+      align-items: center; }
+  #footerBar #socials {
+    display: block;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+    #footerBar #socials a {
+      height: 100%; }
+      #footerBar #socials a img {
+        height: 100%;
+        image-rendering: pixelated; }
+
+#splashScreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 20em;
+  border-style: solid;
+  border-width: 5px;
+  padding: 10px; }
+  #splashScreen img {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 100%;
+    image-rendering: crisp-edges; }
+  #splashScreen #navList {
+    margin-left: 13px;
+    margin-right: 10px;
+    display: grid;
+    grid-gap: 40px;
+    height: fit-content;
+    margin-top: auto;
+    margin-bottom: auto; }
+  #splashScreen h1 {
+    font-weight: 50;
+    text-align: center;
+    height: fit-content;
+    margin: 0; }
+
+.pinkButton:hover {
+  box-shadow: 3px 3px 0 0 black;
+  background-color: #ffa4a4;
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 0px; }
+
+.pinkButton {
+  background-color: #ffa4a4;
+  width: inherit;
+  height: fit-content;
+  padding: 5px;
+  box-shadow: 3px 3px 0 0 white;
+  margin-right: 3px;
+  margin-bottom: 3px; }
+  .pinkButton p {
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block; }
 
 /*# sourceMappingURL=main.css.map */

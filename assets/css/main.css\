@@ -1,0 +1,32 @@
+@font-face {
+  font-family: imbVga;
+  src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff"); }
+body {
+  font-family: imbVga;
+  color: white;
+  background-color: black; }
+
+#homeBar img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  image-rendering: pixelated;
+  width: 30%; }
+
+#navList {
+  padding: 0%;
+  display: list-item; }
+  #navList li {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.pinkButton {
+  background-color: #ffa4a4;
+  width: fit-content; }
+  .pinkButton p {
+    color: black;
+    text-align: center;
+    padding: 4%; }
+
+/*# sourceMappingURL=main.css%5C.map */
