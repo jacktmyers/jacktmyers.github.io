@@ -8,6 +8,7 @@
 // Color Palate:
 $pinkColor: #ffa4a4;
 $pinkPressed: #d38787;
+$mobileSize: 1100px;
 
 // Font Setup
 @font-face {
@@ -15,21 +16,6 @@ $pinkPressed: #d38787;
     src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
 }
 
-a:link{
-    color: $pinkColor;
-}
-a:hover{
-    color: white;
-}
-a:visited{
-    color: $pinkColor;
-}
-a:visited:hover{
-    color: white;
-}
-a:active{
-    color: white;
-}
 
 body{
     font-family: imbVga;
@@ -42,26 +28,79 @@ body{
 html, body {
     margin: 0;
     height: 100%;
-    overflow: hidden;
+}
+
+// Mobile and Desktop switching
+.desktop{
+    @media (max-width: $mobileSize) {
+        display: none !important;
+    }
+}
+.mobile{
+    @media (min-width: $mobileSize){
+        display:none !important;
+    }
+}
+
+h1.typed{
+    font-size: 40px;
+    font-weight: 30;
+    margin-left: 10%;
+}
+
+#homeBarCollision{
+    @extend #homeBar;
+    // Important required to override the inherited positioning
+    position:relative !important;
 }
 
 #homeBar{
+    position:fixed;
+    overflow: hidden;
+    margin-top:0;
+    padding-top:0;
+    top: 0%;
+    width: 100%;
+    background-color: black;
     display:block;
     border-bottom: 4px solid;
     margin: 0;
+    @media (max-width: $mobileSize) {
+        height: fit-content;
+    }
     height: 6%;
-    margin-top: 5px;
     padding-bottom: 5px;
-    img{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        image-rendering: pixelated;
-        height: 100%;
+    padding-top: 5px;
+    a{
+        @media (max-width: $mobileSize) {
+            width:100%;
+        }
+        height: 100%
+    }
+    a{
+        img{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            image-rendering: pixelated;
+            height: 100%;
+            @media (max-width: $mobileSize) {
+                height: auto;
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
     }
 }
 
 #footerBar{
+    background-color: black;
+    @media (max-width: $mobileSize) {
+        flex-direction: column;
+        display: block;
+        height: fit-content;
+    }
     display:flex;
     border-top: 4px solid;
     margin: 0;
@@ -74,6 +113,13 @@ html, body {
     flex-direction: row;
     width: 100%;
     #sourceCode{
+        @media (max-width: $mobileSize) {
+            font-size: 2em;
+            justify-content: center;
+            margin-right:0;
+            margin-top:0;
+            margin-bottom:10px;
+        }
         margin-left: 7px;
         display: flex;
         flex-direction:row;
@@ -81,20 +127,39 @@ html, body {
         p{
             display: flex;
             align-items: center;
+            margin-top: 0;
+            margin-bottom: 5px;
         }
         a{
             display: flex;
             align-items: center;
         }
+        a:link, a:visited{
+            color: $pinkColor;
+        }
+        a:hover, a:visited:hover, a:active{
+            color: white;
+        }
     }
     #socials{
+        @media (max-width: $mobileSize) {
+            display: flex;
+            justify-content: center;
+            height: 120px;
+            margin-bottom: 10px;
+        }
         display: block;
         margin-left:auto;
         margin-right: 5px;
         margin-top: 5px;
         margin-bottom: 5px;
+        // To fix visual bug
+        a:hover, a:visited:hover, a:active, a:link, a:visited{
+            color: black;
+        }
         a{
             height: 100%;
+            //height:fit-content;
             img{
                 height:100%;
                 image-rendering: pixelated;
@@ -104,13 +169,19 @@ html, body {
 }
 
 #splashScreen{
-    position: fixed;
+    @media (max-width: $mobileSize) {
+        width: 60%;
+        justify-content: center;
+        flex-direction: column;
+        height: fit-content;
+    }
+    position: fixed; 
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     display:flex;
     flex-direction: row;
-    width:fit-content;
+    width:fit-conten;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -120,6 +191,12 @@ html, body {
     border-width: 5px;
     padding: 10px;
     img{
+        @media (max-width: $mobileSize){
+            width:100%;
+            height: auto;
+            margin-left:auto;
+            margin-right:auto;
+        }
         display: block;
         margin-top: auto;
         margin-bottom: auto;
@@ -127,19 +204,41 @@ html, body {
         image-rendering: crisp-edges;
     }
     #navList{
+        @media (max-width: $mobileSize){
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
         margin-left: 13px;
         margin-right: 10px;
         display: grid;
-        grid-gap: 40px;        
+        grid-gap: 40px;       
         height: fit-content;
         margin-top: auto;
         margin-bottom: auto;
     }
     h1{
+        @media (max-width: $mobileSize){
+            position:absolute;
+            bottom: 102%;
+            width:100%;
+            left:0%;
+            font-size:8vw;
+        }
+        font-size: 40px;
         font-weight: 50;
         text-align: center;
         height:fit-content;
         margin: 0;
+    }
+}
+
+#navListMobile{
+    display:flex;
+    flex-direction: row;
+    img{
+        image-rendering: pixelated;
     }
 }
 
@@ -159,10 +258,15 @@ html, body {
     width:inherit;
     height:fit-content;
     padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
     box-shadow: 3px 3px 0 0 white; 
     margin-right: 3px;
     margin-bottom: 3px;
-    p{
+    a{
+        @media (max-width: $mobileSize){
+            font-size:6vw;
+        }
         color: black;
         font-size: 30px;
         text-align: center;
@@ -172,5 +276,56 @@ html, body {
         margin-bottom: auto;
         //height: fit-content;
         display:block;
+    }
+    a:link{
+        color: black;
+        text-decoration: none;
+    }
+    a:hover{
+        color: black;
+        text-decoration: none;
+    }
+    a:visited{
+        color: black;
+        text-decoration: none;
+    }
+    a:visited:hover{
+        color: black;
+        text-decoration: none;
+    }
+    a:active{
+        color: black;
+        text-decoration: none;
+    }
+}
+
+#gallery{
+    margin-left: 10%;
+    width:80%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: max-content;
+    row-gap: 3%;
+    column-gap: 2%;
+    .polaroid{
+        // width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+            p {
+            width:inherit;
+            text-align: center;
+            font-size: 2vw;
+            margin-top: 5px;
+            margin-bottom: 0;
+        }
+        img{
+            //width: min-content;     
+            border-style: solid;
+            border-width: 5px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
     }
 }
