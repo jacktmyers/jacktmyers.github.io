@@ -19,9 +19,12 @@ html, body {
     display: none !important; } }
 
 h1.typed {
-  font-size: 40px;
+  font-size: 2.5vw;
   font-weight: 30;
   margin-left: 10%; }
+  @media (max-width: 1100px) {
+    h1.typed {
+      font-size: 5vw; } }
 
 .homeBar {
   position: fixed;
@@ -240,8 +243,12 @@ h1.typed {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: max-content;
-  row-gap: 3%;
+  row-gap: 1%;
   column-gap: 2%; }
+  @media (max-width: 1100px) {
+    #gallery {
+      grid-template-columns: auto auto;
+      column-gap: 8%; } }
   #gallery .polaroid {
     height: max-content;
     display: flex;
@@ -250,8 +257,11 @@ h1.typed {
       width: inherit;
       text-align: center;
       font-size: 2vw;
-      margin-top: 5px;
+      margin-top: 2%;
       margin-bottom: 0; }
+      @media (max-width: 1100px) {
+        #gallery .polaroid p {
+          font-size: 4vw; } }
     #gallery .polaroid img {
       border-style: solid;
       border-width: 5px;

@@ -43,9 +43,12 @@ html, body {
 }
 
 h1.typed{
-    font-size: 40px;
+    font-size: 2.5vw;
     font-weight: 30;
     margin-left: 10%;
+    @media (max-width: $mobileSize){
+        font-size: 5vw;
+    }
 }
 
 .homeBar{
@@ -297,9 +300,13 @@ h1.typed{
     margin-left: 10%;
     width:80%;
     display: grid;
+    @media (max-width: $mobileSize){
+        grid-template-columns: auto auto;
+        column-gap: 8%;
+    }
     grid-template-columns: auto auto auto auto;
     grid-template-rows: max-content;
-    row-gap: 3%;
+    row-gap: 1%;
     column-gap: 2%;
     .polaroid{
         // width: 100%;
@@ -310,8 +317,11 @@ h1.typed{
             width:inherit;
             text-align: center;
             font-size: 2vw;
-            margin-top: 5px;
+            margin-top: 2%;
             margin-bottom: 0;
+            @media (max-width: $mobileSize){
+                font-size: 4vw;
+            }
         }
         img{
             //width: min-content;     
