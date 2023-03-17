@@ -48,13 +48,7 @@ h1.typed{
     margin-left: 10%;
 }
 
-#homeBarCollision{
-    @extend #homeBar;
-    // Important required to override the inherited positioning
-    position:relative !important;
-}
-
-#homeBar{
+.homeBar{
     position:fixed;
     overflow: hidden;
     margin-top:0;
@@ -94,7 +88,7 @@ h1.typed{
     }
 }
 
-#footerBar{
+.footerBar{
     background-color: black;
     @media (max-width: $mobileSize) {
         flex-direction: column;
