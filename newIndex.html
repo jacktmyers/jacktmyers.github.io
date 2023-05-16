@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Home</title>
+		<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/newMain.css" />
+	</head>
+	<style>
+		html, body {
+			overflow: hidden;
+		}
+	</style>
+	<body>
+		<div class = "homeBar">
+			<a href = "https://www.jacktmyers.com">
+				<img src="assets/img/websiteName.png"
+				alt="JACKTMYERS.COM"
+				onmouseover="hover(this);"
+				onmouseout="hoverOut(this);"
+				>
+			</a>
+		</div>
+
+		<div id = "splashScreen" class="desktop">
+			<img src="assets/img/headshot.png">
+			<div id = "navList">
+				<h1 class="typed" id="WELCOME"></h1>
+				<div id = "navButtons">
+					<div class = "pinkButton">
+						<a href="pages/metals/index.html">METALS</a>
+					</div>
+					<div class = "pinkButton">
+						<a>ENGINEERING</a>
+					</div>
+					<div class = "pinkButton">
+						<a>2D ART</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id = "splashScreen" class="mobile">
+			<h1 class="typed mobile" id="WELCOME"></h1>
+			<img src="assets/img/headshot.png">
+			<div id="navListMobile">
+				<img src="assets/img/navListFancy.png" style="transform:rotate(180deg);">
+				<div id = "navList">
+					<div class = "pinkButton">
+						<a href="pages/metals/index.html">METALS</a>
+					</div>
+					<div class = "pinkButton">
+						<a>ENGINEERING</a>
+					</div>
+					<div class = "pinkButton">
+						<a>2D ART</a>
+					</div>
+				</div>
+				<img src="assets/img/navListFancy.png">
+			</div>
+		</div>
+
+		<div class="footerBar desktop">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
+
+<script src="assets/js/typeWriter.js"></script>
+<script src="assets/js/hover.js"></script>

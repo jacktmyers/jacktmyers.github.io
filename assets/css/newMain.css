@@ -1,0 +1,249 @@
+@font-face {
+  font-family: imbVga;
+  src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
+}
+@media (max-width: 1100px) {
+  .desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 1100px) {
+  .mobile {
+    display: none !important;
+  }
+}
+body {
+  font-family: imbVga;
+  color: white;
+  background-color: black;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.homeBar {
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1100px) {
+  .homeBar {
+    border-bottom: 0.3vw solid;
+  }
+}
+@media (max-width: 1100px) {
+  .homeBar {
+    border-bottom: 0.2em solid;
+  }
+}
+.homeBar a {
+  display: flex;
+  height: min-content;
+}
+@media (min-width: 1100px) {
+  .homeBar a {
+    width: 30vw;
+  }
+}
+@media (max-width: 1100px) {
+  .homeBar a {
+    width: 80vw;
+  }
+}
+.homeBar a img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+#splashScreen {
+  display: flex;
+  padding: 0.5vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 1100px) {
+  #splashScreen {
+    flex-direction: row;
+    height: 20vw;
+    width: 40%;
+    border: 0.3vw solid;
+  }
+}
+@media (max-width: 1100px) {
+  #splashScreen {
+    flex-direction: column;
+    width: 60vw;
+    max-height: 50%;
+    height: fit-content;
+    border: 0.2em solid;
+  }
+}
+@media (min-width: 1100px) {
+  #splashScreen #headshot {
+    height: 100%;
+  }
+}
+@media (max-width: 1100px) {
+  #splashScreen #headshot {
+    flex-grow: 1;
+  }
+}
+
+#splashScreen #navList {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+  padding-top: 0.2vw;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#splashScreen #navList h1 {
+  font-size: 2.5vw;
+  padding: 0;
+  margin: 0;
+}
+
+#splashScreen #navList #navButtons {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 7%;
+}
+
+#splashScreen #navList #navButtons .pinkButton:hover {
+  box-shadow: 3px 3px 0 0 black;
+  background-color: #ffa4a4;
+  margin-left: 3px;
+  margin-top: 3px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+#splashScreen #navList #navButtons .pinkButton {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffa4a4;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 17%;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-shadow: 3px 3px 0 0 white;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+
+#splashScreen #navList #navButtons .pinkButton a {
+  font-size: 2vw;
+  color: black;
+}
+
+#splashScreen #navList #navButtons .pinkButton a:link {
+  color: black;
+  text-decoration: none;
+}
+
+#splashScreen #navList #navButtons .pinkButton a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#splashScreen #navList #navButtons .pinkButton a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+#splashScreen #navList #navButtons .pinkButton a:visited:hover {
+  color: black;
+  text-decoration: none;
+}
+
+#splashScreen #navList #navButtons .pinkButton a:active {
+  color: black;
+  text-decoration: none;
+}
+
+.footerBar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  top: 100%;
+  transform: translate(0%, -100%);
+  height: 5%;
+  width: 100%;
+}
+
+@media (min-width: 1100px) {
+  .footerBar {
+    border-top: 0.3vw solid;
+  }
+}
+@media (max-width: 1100px) {
+  .footerBar {
+    border-top: 0.2em solid;
+  }
+}
+.footerBar #sourceCode {
+  font-size: 1vw;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0.5vw;
+}
+
+.footerBar #sourceCode p {
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.footerBar #sourceCode a {
+  height: 100%;
+}
+
+.footerBar #sourceCode a:link, .footerBar #sourceCode a:visited {
+  color: #ffa4a4;
+}
+
+.footerBar #sourceCode a:hover, .footerBar #sourceCode a:visited:hover, .footerBar #sourceCode a:active {
+  color: white;
+}
+
+.footerBar #socials {
+  display: flex;
+  flex-direction: row;
+  margin-right: 0.1vw;
+  margin-left: auto;
+  height: 100%;
+}
+
+.footerBar #socials a {
+  height: 100%;
+}
+
+.footerBar #socials a img {
+  height: 100%;
+  image-rendering: pixelated;
+}
+
+
+
+/*# sourceMappingURL=newMain.css.map */
