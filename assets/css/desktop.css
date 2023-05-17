@@ -1,119 +1,52 @@
-// Color Palate
-$pinkColor: #ffa4a4;
-$pinkPressed: #d38787;
-
-// Switching Size
-$mobileSize: 1100px;
-
-// Desktop/Mobile Border
-$mobileBorder: 0.2em solid;
-$desktopBorder: 0.3vw solid;
-
-// Font Setup
 @font-face {
   font-family: imbVga;
   src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
 }
-
-// Desktop/Mobile Switching
-@media (max-width: $mobileSize) {
-  .desktop {
-    display: none !important;
-  }
-}
-@media (min-width: $mobileSize) {
-  .mobile {
-    display: none !important;
-  }
-}
-
-// Global Background and Font
 body {
   font-family: imbVga;
   color: white;
   background-color: black;
 }
 
-// Fill the Whole Page
 html, body {
   margin: 0;
   height: 100%;
 }
 
-// Homebar
 .homeBar {
-	// Always Set
   margin-top: 0;
   padding-top: 0;
   width: 100%;
-  height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-	// Desktop
-	@media (min-width: $mobileSize) {
-		border-bottom: $desktopBorder;
-	}
-	// Mobile
-	@media (max-width: $mobileSize) {
-		border-bottom: $mobileBorder;
-	}
-	// Link
-	a {
-		// Always Set
-		display: flex;
-		height: min-content;
-		// Desktop
-		@media (min-width: $mobileSize) {
-			width: 30vw;
-		}
-		// Mobile
-		@media (max-width: $mobileSize) {
-			width: 80vw;
-		}
-		// Title Image
-		img {
-			width: 100%;
-			image-rendering: pixelated;
-		}
-	}
+  border-bottom: 0.5vh solid;
+  height: 5vh;
+}
+.homeBar a {
+  display: flex;
+  height: 100%;
+}
+.homeBar a img {
+  height: 100%;
+  image-rendering: pixelated;
 }
 
-// Centered Menu
 #splashScreen {
-	// Always Set
   display: flex;
-  padding: 0.5vw;
+  padding: 0.5vh;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-	// Desktop
-	@media (min-width: $mobileSize) {
-		flex-direction: row;
-		height: 20vw;
-		width: 40%;
-		border: $desktopBorder;
-	}
-	// Mobile
-	@media (max-width: $mobileSize) {
-		flex-direction: column;
-		width: 60vw;
-		max-height: 50%;
-		height: fit-content;
-		border: $mobileBorder;
-	}
-	// Headshot Picture
-	#headshot {
-		@media (min-width: $mobileSize) {
-				height: 100%;
-		}
-		@media (max-width: $mobileSize) {
-				flex-grow: 1;
-		}
-	}
+  flex-direction: row;
+  height: 40vh;
+  width: 80vh;
+  border: 0.5vh solid;
 }
-
+#splashScreen #headshot {
+  height: 100%;
+}
 #splashScreen #navList {
   display: flex;
   flex-direction: column;
@@ -121,17 +54,15 @@ html, body {
   width: 50%;
   padding-left: 0.5vw;
   padding-right: 0.5vw;
-  padding-top: 0.2vw;
+  padding-top: 0.2vh;
   justify-content: flex-start;
   align-items: center;
 }
-
 #splashScreen #navList h1 {
-  font-size: 2.5vw;
+  font-size: 5vh;
   padding: 0;
   margin: 0;
 }
-
 #splashScreen #navList #navButtons {
   display: flex;
   flex-grow: 1;
@@ -141,7 +72,6 @@ html, body {
   width: 100%;
   gap: 7%;
 }
-
 #splashScreen #navList #navButtons .pinkButton:hover {
   box-shadow: 3px 3px 0 0 black;
   background-color: #ffa4a4;
@@ -150,7 +80,6 @@ html, body {
   margin-right: 0px;
   margin-bottom: 0px;
 }
-
 #splashScreen #navList #navButtons .pinkButton {
   display: flex;
   flex-direction: row;
@@ -165,32 +94,26 @@ html, body {
   margin-right: 3px;
   margin-bottom: 3px;
 }
-
 #splashScreen #navList #navButtons .pinkButton a {
-  font-size: 2vw;
+  font-size: 4vh;
   color: black;
 }
-
 #splashScreen #navList #navButtons .pinkButton a:link {
   color: black;
   text-decoration: none;
 }
-
 #splashScreen #navList #navButtons .pinkButton a:hover {
   color: black;
   text-decoration: none;
 }
-
 #splashScreen #navList #navButtons .pinkButton a:visited {
   color: black;
   text-decoration: none;
 }
-
 #splashScreen #navList #navButtons .pinkButton a:visited:hover {
   color: black;
   text-decoration: none;
 }
-
 #splashScreen #navList #navButtons .pinkButton a:active {
   color: black;
   text-decoration: none;
@@ -204,46 +127,31 @@ html, body {
   position: fixed;
   top: 100%;
   transform: translate(0%, -100%);
-  height: 5%;
+  height: 5vh;
   width: 100%;
-}
-
-@media (min-width: 1100px) {
-  .footerBar {
-    border-top: 0.3vw solid;
-  }
-}
-@media (max-width: 1100px) {
-  .footerBar {
-    border-top: 0.2em solid;
-  }
+  border-top: 0.5vh solid;
 }
 .footerBar #sourceCode {
-  font-size: 1vw;
+  font-size: 2vh;
   display: flex;
   flex-direction: row;
   margin-left: 0.5vw;
 }
-
 .footerBar #sourceCode p {
   justify-content: center;
   margin-top: 0;
   margin-bottom: 0;
   height: 100%;
 }
-
 .footerBar #sourceCode a {
   height: 100%;
 }
-
 .footerBar #sourceCode a:link, .footerBar #sourceCode a:visited {
   color: #ffa4a4;
 }
-
 .footerBar #sourceCode a:hover, .footerBar #sourceCode a:visited:hover, .footerBar #sourceCode a:active {
   color: white;
 }
-
 .footerBar #socials {
   display: flex;
   flex-direction: row;
@@ -251,16 +159,12 @@ html, body {
   margin-left: auto;
   height: 100%;
 }
-
-.footerBar #socials a {
+.footerBar a {
   height: 100%;
 }
-
-.footerBar #socials a img {
+.footerBar a img {
   height: 100%;
   image-rendering: pixelated;
 }
 
-
-
-/*# sourceMappingURL=newMain.scss.map */
+/*# sourceMappingURL=desktop.css.map */

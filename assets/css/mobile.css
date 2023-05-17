@@ -1,0 +1,36 @@
+@font-face {
+  font-family: imbVga;
+  src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
+}
+body {
+  font-family: imbVga;
+  color: white;
+  background-color: blue;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+.homeBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 0.2em solid;
+}
+.homeBar a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.homeBar a img {
+  width: 100%;
+  image-rendering: pixelated;
+}
+
+/*# sourceMappingURL=mobile.css.map */

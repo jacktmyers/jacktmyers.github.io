@@ -1,0 +1,203 @@
+// Color Palate
+$pinkColor: #ffa4a4;
+$pinkPressed: #d38787;
+
+// Desktop/Mobile Border
+$mobileBorder: 0.2em solid;
+$desktopBorder: 0.5vh solid;
+
+// Font Setup
+@font-face {
+  font-family: imbVga;
+  src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
+}
+
+// Global Background and Font
+body {
+  font-family: imbVga;
+  color: white;
+  background-color: black;
+}
+
+// Fill the Whole Page
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+// Homebar
+.homeBar {
+	// Always Set
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	border-bottom: $desktopBorder;
+	height: 5vh;
+	// Link
+	a {
+		// Always Set
+		display: flex;
+		height: 100%;
+		// Title Image
+		img {
+			height: 100%;
+			image-rendering: pixelated;
+		}
+	}
+}
+
+// Centered Menu
+#splashScreen {
+	// Always Set
+  display: flex;
+  padding: 0.5vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+	flex-direction: row;
+	height: 40vh;
+	width: 80vh;
+	border: $desktopBorder;
+	// Headshot Picture
+	#headshot {
+		height: 100%;
+	}
+	// Second Div
+	#navList {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 50%;
+		padding-left: 0.5vw;
+		padding-right: 0.5vw;
+		padding-top: 0.2vh;
+		justify-content: flex-start;
+		align-items: center;
+		// Typed Element
+		h1 {
+			font-size: 5vh;
+			padding: 0;
+			margin: 0;
+		}
+		// Buttons Div
+		#navButtons {
+			display: flex;
+			flex-grow: 1;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			gap: 7%;
+			// Button
+			.pinkButton:hover {
+				box-shadow: 3px 3px 0 0 black;
+				background-color: $pinkColor;
+				margin-left: 3px;
+				margin-top: 3px;
+				margin-right: 0px;
+				margin-bottom: 0px;
+			}
+			.pinkButton {
+				display: flex;
+				flex-direction: row;
+				background-color: $pinkColor;
+				align-items: center;
+				justify-content: center;
+				width: 80%;
+				height: 17%;
+				padding-left: 15px;
+				padding-right: 15px;
+				box-shadow: 3px 3px 0 0 white;
+				margin-right: 3px;
+				margin-bottom: 3px;
+				// Link Formatting
+				a {
+					font-size: 4vh;
+					color: black;
+				}
+				a:link {
+					color: black;
+					text-decoration: none;
+				}
+				a:hover {
+					color: black;
+					text-decoration: none;
+				}
+				a:visited {
+					color: black;
+					text-decoration: none;
+				}
+				a:visited:hover {
+					color: black;
+					text-decoration: none;
+				}
+				a:active {
+					color: black;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+// Footer Bar
+.footerBar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+	// Make it at the bottom
+  top: 100%;
+  transform: translate(0%, -100%);
+  height: 5vh;
+  width: 100%;
+	border-top: $desktopBorder;
+	// Source Code link
+	#sourceCode {
+		font-size: 2vh;
+		display: flex;
+		flex-direction: row;
+		margin-left: 0.5vw;
+		// Text
+		p {
+			justify-content: center;
+			margin-top: 0;
+			margin-bottom: 0;
+			height: 100%;
+		}
+		// Actual Link
+		a {
+			height: 100%;
+		}
+		// Link formatting
+		a:link, a:visited {
+			color: $pinkColor;
+		}
+
+		a:hover, a:visited:hover, a:active {
+			color: white;
+		}
+	}
+	// Social Buttons
+	#socials {
+		display: flex;
+		flex-direction: row;
+		margin-right: 0.1vw;
+		margin-left: auto;
+		height: 100%;
+	}
+	// Link Formatting
+	a {
+		height: 100%;
+		// Button Scaling
+		img {
+			height: 100%;
+			image-rendering: pixelated;
+		}
+	}
+}

@@ -23,3 +23,5 @@ function scrollFix(){
     typedHeader = document.getElementsByClassName("typed")[0];
     typedHeader.style.marginTop = currHomeBar.offsetHeight + typedHeader.offsetHeight/2 + "px"
 }
+
+addEventListener("resize", (event) => mobileSwitching());

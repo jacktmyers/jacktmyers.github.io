@@ -5,7 +5,7 @@
 		<link rel="shortcut icon" type="image/png" href="assets/img/favicon.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/newMain.css" />
+		<link rel="stylesheet" href="assets/css/desktop.css" />
 	</head>
 	<style>
 		html, body {
@@ -13,7 +13,10 @@
 		}
 	</style>
 	<body>
-		<div class = "homeBar">
+
+		<!-- Desktop Elements -->
+
+		<div class = "homeBar desktop">
 			<a href = "https://www.jacktmyers.com">
 				<img src="assets/img/websiteName.png"
 				alt="JACKTMYERS.COM"
@@ -41,25 +44,6 @@
 			</div>
 		</div>
 
-		<div id = "splashScreen" class="mobile">
-			<h1 class="typed mobile" id="WELCOME"></h1>
-			<img src="assets/img/headshot.png">
-			<div id="navListMobile">
-				<img src="assets/img/navListFancy.png" style="transform:rotate(180deg);">
-				<div id = "navList">
-					<div class = "pinkButton">
-						<a href="pages/metals/index.html">METALS</a>
-					</div>
-					<div class = "pinkButton">
-						<a>ENGINEERING</a>
-					</div>
-					<div class = "pinkButton">
-						<a>2D ART</a>
-					</div>
-				</div>
-				<img src="assets/img/navListFancy.png">
-			</div>
-		</div>
 
 		<div class="footerBar desktop">
 			<div id="sourceCode">
@@ -83,8 +67,41 @@
 			</div>
 		</div>
 
+		<!-- Mobile Elements -->
+
+		<div class = "homeBar mobile">
+			<a href = "https://www.jacktmyers.com">
+				<img src="assets/img/websiteName.png"
+				alt="JACKTMYERS.COM"
+				onmouseover="hover(this);"
+				onmouseout="hoverOut(this);"
+				>
+			</a>
+		</div>
+
+		<div id = "splashScreen" class="mobile">
+			<h1 class="typed mobile" id="WELCOME"></h1>
+			<img src="assets/img/headshot.png">
+			<div id="navListMobile">
+				<img src="assets/img/navListFancy.png" style="transform:rotate(180deg);">
+				<div id = "navList">
+					<div class = "pinkButton">
+						<a href="pages/metals/index.html">METALS</a>
+					</div>
+					<div class = "pinkButton">
+						<a>ENGINEERING</a>
+					</div>
+					<div class = "pinkButton">
+						<a>2D ART</a>
+					</div>
+				</div>
+				<img src="assets/img/navListFancy.png">
+			</div>
+		</div>
+
 	</body>
 </html>
 
 <script src="assets/js/typeWriter.js"></script>
 <script src="assets/js/hover.js"></script>
+<script src="assets/js/mobileSwitching.js"></script>
