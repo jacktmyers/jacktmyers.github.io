@@ -5,12 +5,13 @@
 }
 
 $mobileBorder: 0.2em solid;
+$pinkColor: #ffa4a4;
 
 // Global Background and Font
 body {
   font-family: imbVga;
   color: white;
-  background-color: blue;
+  background-color: black;
 }
 
 // Fill the Whole Page
@@ -32,7 +33,7 @@ html, body {
 	// Link
 	a{
 		display: flex;
-		width: 100%;
+		width: 90%;
 		height: 100%;
 		// Title Image
 		img {
@@ -42,4 +43,169 @@ html, body {
 	}
 }
 
+// Splashscreen
+#splashScreen {
+	display: flex;
+	padding: 0.5vw;
+	position: fixed;
+	top: 54%;
+	left: 50%;
+  transform: translate(-50%, -54%);
+	flex-direction: column;
+	height: fit-content;
+	width: 40vh;
+	max-width: 90vw;
+	//width: fit-content;
+	border: $mobileBorder;
+	//justify-content: center;
+	//align-items: center;
+	#headshot {
+		width: 100%;
+	}
+	h1 {
+		//display: flex;
+		//align-items: center;
+		//flex-direction: row;
+		position: absolute;
+		bottom: 100%;
+		width: 100%;
+		left: 0%;
+		text-align: center;
+		font-size: 9vw;	
+		margin-bottom: 0;
+	}
+	#navListMobile {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		#navListDec{
+			width: 10%;
+			margin:.5vh;
+			image-rendering: pixelated;
+		}
+	}
+	#navList {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 80%;
+		margin-bottom: 1vh;
+		padding-left: 1vh;
+		padding-right: 1vh;
+		gap: 1vh;
+		margin-top: .5vh;
+		margin-bottom: .5vh;
+		.pinkButton:hover {
+			box-shadow: 3px 3px 0 0 black;
+			background-color: $pinkColor;
+			margin-left: 3px;
+			margin-top: 3px;
+			margin-right: 0px;
+			margin-bottom: 0px;
+		}
+		.pinkButton {
+    	background-color: $pinkColor;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			font-size: 4vh;
+			@media (max-width: 300px) {
+				font-size: 10vw;
+			}
+			// Button Padding
+			box-shadow: 3px 3px 0 0 white; 
+			margin-right: 3px;
+			margin-bottom: 3px;
+			padding-left: .5vw;
+			padding-right: .5vw;
+			padding-top: 1vh;
+			padding-bottom: 1vh;
+			a {
+				color: black;
+				width: 100%;
+				text-align: center;
+			}
+			a:link{
+					color: black;
+					text-decoration: none;
+			}
+			a:hover{
+					color: black;
+					text-decoration: none;
+			}
+			a:visited{
+					color: black;
+					text-decoration: none;
+			}
+			a:visited:hover{
+					color: black;
+					text-decoration: none;
+			}
+			a:active{
+					color: black;
+					text-decoration: none;
+			}
+		}
+	}
+}
 
+// Footer Bar
+.footerBar {
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	position: fixed;
+	top: 100%;
+	height: fit-content; 
+  transform: translate(0%, -100%);
+	border-top: $mobileBorder;
+	#sourceCode {
+		font-size: 5vw;
+		display: flex;
+		flex-direction: row;
+		margin-left: .5vh;
+		margin-top: .5vh;
+		margin-bottom: 0;
+		p {
+			justify-content: center;
+			margin-top: 0;
+			margin-bottom: 0;
+			height: 100%;
+		}
+		// Actual Link
+		a {
+			height: 100%;
+		}
+		// Link formatting
+		a:link, a:visited {
+			color: $pinkColor;
+		}
+		a:hover, a:visited:hover, a:active {
+			color: white;
+		}
+	}
+	#socials {
+		display: flex;
+		flex-direction: row;
+		height: 5vh;
+		@media (max-width: 300px) {
+			height: 10vw;
+		}
+		margin-top: .5vh;
+		margin-bottom: .5vh;
+	}
+	// Link Formatting
+	a {
+		height: 100%;
+		// Button Scaling
+		img {
+			height: 100%;
+			image-rendering: pixelated;
+		}
+	}
+}

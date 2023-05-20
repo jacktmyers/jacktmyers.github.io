@@ -1,7 +1,7 @@
 function mobileSwitching(){
 	// We want to switch to mobile if h/l > 1
 	// We want to switch to deskto if h/l < 1
-	const switchRatio = 1;
+	const switchRatio = 1.1;
 	var currRatio = window.innerHeight / window.innerWidth;
 
 	// Get the elements corresponding to each layout
