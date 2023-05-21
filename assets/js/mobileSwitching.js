@@ -1,4 +1,4 @@
-function mobileSwitching(){
+function mobileSwitching(baseDir){
 	// We want to switch to mobile if h/l > 1
 	// We want to switch to deskto if h/l < 1
 	const switchRatio = 1.1;
@@ -17,7 +17,7 @@ function mobileSwitching(){
 		for (var elem of desktopElems) {
 			elem.style.display = elem.oldDisplay;
 		}
-		swapStyleSheet("assets/css/desktop.css");
+		swapStyleSheet(baseDir + "desktop.css");
 		currentLayout = "Desktop";
 	} else if((currRatio >= switchRatio) && (currentLayout != "Mobile")){
 		console.log("Switching Page to Mobile");
@@ -28,7 +28,7 @@ function mobileSwitching(){
 		for (var elem of mobileElems) {
 			elem.style.display = elem.oldDisplay;
 		}
-		swapStyleSheet("assets/css/mobile.css");
+		swapStyleSheet(baseDir + "mobile.css");
 		currentLayout = "Mobile";
 	} else {
 		console.log("Resize detected but no switch necessary");
@@ -40,6 +40,18 @@ function swapStyleSheet(sheet) {
 	sheets[1].attributes.href.nodeValue = sheet;
 }
 
+function getDirectory(){
+	var sheets = document.getElementsByTagName('link');
+	var fullPath = sheets[1].attributes.href.nodeValue;
+	const baseDirPattern = new RegExp("\/[^\/]*$");
+	var fileName = fullPath.match(baseDirPattern);
+	return fullPath.substring(0,fullPath.length-fileName[0].length+1);
+
+}
+
 var currentLayout;
-document.onload = mobileSwitching();
-addEventListener("resize", (event) => mobileSwitching());
+var baseDir = getDirectory();
+document.onload = mobileSwitching(baseDir);
+addEventListener("resize", (event) => mobileSwitching(baseDir));
+
+

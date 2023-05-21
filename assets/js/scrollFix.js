@@ -1,27 +1,21 @@
-//document.onload = scrollFix();
-window.onresize = scrollFix();
-
 function scrollFix(){
-    const mobileSize = 1100
-    homeBars = document.getElementsByClassName("homeBar")
     footerBars = document.getElementsByClassName("footerBar")
-    // Choose an element based on the screen size
-    var elemType = "desktop"
-    if(screen.width <= mobileSize){
-        elemType = "mobile"
-    }
-    // We only filter footerbars for now because there
-    // does not exist a mobile and desktop version
-    currHomeBar = homeBars[0]
     for(var elem of footerBars){
-        if (elem.classList[1] == elemType){
+        if (elem.classList[1] == "mobile"){
             currFooterBar = elem
             break;
         }
     }
-    console.log(document.getElementById("gallery").offsetHeight)
-    typedHeader = document.getElementsByClassName("typed")[0];
-    typedHeader.style.marginTop = currHomeBar.offsetHeight + typedHeader.offsetHeight/2 + "px"
+    contentElems = document.getElementsByClassName("content");
+		for (var elem of contentElems){
+			if (elem.classList[0] == "mobile"){
+				content = elem;
+				break;
+			}
+		}
+    content.style.marginBottom = currFooterBar.offsetHeight + "px"
+		console.log("Fixed Scroll for mobile");
 }
 
-addEventListener("resize", (event) => mobileSwitching());
+window.addEventListener('load', (event) => scrollFix());
+addEventListener("resize", (event) => scrollFix());

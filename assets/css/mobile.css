@@ -65,9 +65,15 @@ html, body {
   justify-content: center;
 }
 #splashScreen #navListMobile #navListDec {
+  display: flex;
   width: 10%;
   margin: 0.5vh;
+  flex-direction: column;
+  gap: 2vh;
+}
+#splashScreen #navListMobile #navListDec img {
   image-rendering: pixelated;
+  width: 100%;
 }
 #splashScreen #navList {
   display: flex;
@@ -189,6 +195,66 @@ html, body {
 .footerBar a img {
   height: 100%;
   image-rendering: pixelated;
+}
+
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+}
+#content #fancyHeader {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  gap: 2vw;
+}
+#content #fancyHeader img {
+  width: 5vw;
+  height: 5vw;
+  image-rendering: pixelated;
+}
+#content h1 {
+  font-size: 9vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 100%;
+}
+#content #gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 40vw);
+  column-gap: 2vw;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+#content #gallery .polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#content #gallery .polaroid img {
+  width: 90%;
+  padding: 1vw;
+  border: 0.2em solid;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+#content #gallery .polaroid img:hover {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#content #gallery .polaroid p {
+  margin-top: 0.5vh;
+  font-size: 4vw;
+  margin-left: 5px;
+  width: 100%;
+  text-align: left;
 }
 
 /*# sourceMappingURL=mobile.css.map */

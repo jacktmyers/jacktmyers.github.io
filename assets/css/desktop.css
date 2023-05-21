@@ -32,22 +32,39 @@ html, body {
   image-rendering: pixelated;
 }
 
-#splashScreen {
+#splashScreenFancy {
   display: flex;
-  padding: 0.5vh;
+  width: fit-content;
+  height: 40vh;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+#splashScreenFancy .borderElements {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+#splashScreenFancy .borderElements img {
+  image-rendering: pixelated;
+  width: 4vh;
+  height: 4vh;
+  margin: 1vh;
+}
+#splashScreenFancy #splashScreen {
+  display: flex;
+  padding: 0.5vh;
   flex-direction: row;
   height: 40vh;
-  width: 80vh;
+  width: 75vh;
   border: 0.5vh solid;
 }
-#splashScreen #headshot {
+#splashScreenFancy #splashScreen #headshot {
   height: 100%;
 }
-#splashScreen #navList {
+#splashScreenFancy #splashScreen #navList {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -58,12 +75,12 @@ html, body {
   justify-content: flex-start;
   align-items: center;
 }
-#splashScreen #navList h1 {
+#splashScreenFancy #splashScreen #navList h1 {
   font-size: 5vh;
   padding: 0;
   margin: 0;
 }
-#splashScreen #navList #navButtons {
+#splashScreenFancy #splashScreen #navList #navButtons {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
@@ -72,7 +89,7 @@ html, body {
   width: 100%;
   gap: 7%;
 }
-#splashScreen #navList #navButtons .pinkButton:hover {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton:hover {
   box-shadow: 3px 3px 0 0 black;
   background-color: #ffa4a4;
   margin-left: 3px;
@@ -80,7 +97,7 @@ html, body {
   margin-right: 0px;
   margin-bottom: 0px;
 }
-#splashScreen #navList #navButtons .pinkButton {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton {
   display: flex;
   flex-direction: row;
   background-color: #ffa4a4;
@@ -94,27 +111,29 @@ html, body {
   margin-right: 3px;
   margin-bottom: 3px;
 }
-#splashScreen #navList #navButtons .pinkButton a {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a {
   font-size: 4vh;
   color: black;
+  width: 100%;
+  text-align: center;
 }
-#splashScreen #navList #navButtons .pinkButton a:link {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a:link {
   color: black;
   text-decoration: none;
 }
-#splashScreen #navList #navButtons .pinkButton a:hover {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a:hover {
   color: black;
   text-decoration: none;
 }
-#splashScreen #navList #navButtons .pinkButton a:visited {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a:visited {
   color: black;
   text-decoration: none;
 }
-#splashScreen #navList #navButtons .pinkButton a:visited:hover {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a:visited:hover {
   color: black;
   text-decoration: none;
 }
-#splashScreen #navList #navButtons .pinkButton a:active {
+#splashScreenFancy #splashScreen #navList #navButtons .pinkButton a:active {
   color: black;
   text-decoration: none;
 }
@@ -165,6 +184,65 @@ html, body {
 .footerBar a img {
   height: 100%;
   image-rendering: pixelated;
+}
+
+#content {
+  display: flex;
+  width: fit-content;
+  flex-direction: column;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5vh;
+}
+#content #fancyHeader {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 2vh;
+}
+#content #fancyHeader h1 {
+  font-size: 5vh;
+  margin-bottom: 2vh;
+  margin-left: 0;
+  flex-grow: 1;
+}
+#content #fancyHeader img {
+  image-rendering: pixelated;
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+}
+#content #gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 20vw);
+  column-gap: 2vh;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+#content #gallery .polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#content #gallery .polaroid img {
+  width: 90%;
+  padding: 1vh;
+  border: 0.5vh solid;
+  margin-bottom: 5px;
+  margin-left: 5px;
+}
+#content #gallery .polaroid img:hover {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+#content #gallery .polaroid p {
+  font-size: 2vh;
+  margin-top: 1vh;
+  width: 100%;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=desktop.css.map */

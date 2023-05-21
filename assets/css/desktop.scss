@@ -50,94 +50,113 @@ html, body {
 }
 
 // Centered Menu
-#splashScreen {
-	// Always Set
-  display: flex;
-  padding: 0.5vh;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-	flex-direction: row;
+#splashScreenFancy {
+	display: flex;
+	width: fit-content;
 	height: 40vh;
-	width: 80vh;
-	border: $desktopBorder;
-	// Headshot Picture
-	#headshot {
-		height: 100%;
-	}
-	// Second Div
-	#navList {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.borderElements {
 		display: flex;
-		flex-direction: column;
 		height: 100%;
-		width: 50%;
-		padding-left: 0.5vw;
-		padding-right: 0.5vw;
-		padding-top: 0.2vh;
-		justify-content: flex-start;
-		align-items: center;
-		// Typed Element
-		h1 {
-			font-size: 5vh;
-			padding: 0;
-			margin: 0;
+		flex-direction: column;
+		justify-content: center;
+		img {
+			image-rendering: pixelated;
+			width: 4vh;
+			height: 4vh;
+			margin: 1vh;
 		}
-		// Buttons Div
-		#navButtons {
+	}
+	#splashScreen {
+		// Always Set
+		display: flex;
+		padding: 0.5vh;
+		flex-direction: row;
+		height: 40vh;
+		width: 75vh;
+		border: $desktopBorder;
+		// Headshot Picture
+		#headshot {
+			height: 100%;
+		}
+		// Second Div
+		#navList {
 			display: flex;
-			flex-grow: 1;
 			flex-direction: column;
+			height: 100%;
+			width: 50%;
+			padding-left: 0.5vw;
+			padding-right: 0.5vw;
+			padding-top: 0.2vh;
+			justify-content: flex-start;
 			align-items: center;
-			justify-content: center;
-			width: 100%;
-			gap: 7%;
-			// Button
-			.pinkButton:hover {
-				box-shadow: 3px 3px 0 0 black;
-				background-color: $pinkColor;
-				margin-left: 3px;
-				margin-top: 3px;
-				margin-right: 0px;
-				margin-bottom: 0px;
+			// Typed Element
+			h1 {
+				font-size: 5vh;
+				padding: 0;
+				margin: 0;
 			}
-			.pinkButton {
+			// Buttons Div
+			#navButtons {
 				display: flex;
-				flex-direction: row;
-				background-color: $pinkColor;
+				flex-grow: 1;
+				flex-direction: column;
 				align-items: center;
 				justify-content: center;
-				width: 80%;
-				height: 17%;
-				padding-left: 15px;
-				padding-right: 15px;
-				box-shadow: 3px 3px 0 0 white;
-				margin-right: 3px;
-				margin-bottom: 3px;
-				// Link Formatting
-				a {
-					font-size: 4vh;
-					color: black;
+				width: 100%;
+				gap: 7%;
+				// Button
+				.pinkButton:hover {
+					box-shadow: 3px 3px 0 0 black;
+					background-color: $pinkColor;
+					margin-left: 3px;
+					margin-top: 3px;
+					margin-right: 0px;
+					margin-bottom: 0px;
 				}
-				a:link {
-					color: black;
-					text-decoration: none;
-				}
-				a:hover {
-					color: black;
-					text-decoration: none;
-				}
-				a:visited {
-					color: black;
-					text-decoration: none;
-				}
-				a:visited:hover {
-					color: black;
-					text-decoration: none;
-				}
-				a:active {
-					color: black;
-					text-decoration: none;
+				.pinkButton {
+					display: flex;
+					flex-direction: row;
+					background-color: $pinkColor;
+					align-items: center;
+					justify-content: center;
+					width: 80%;
+					height: 17%;
+					padding-left: 15px;
+					padding-right: 15px;
+					box-shadow: 3px 3px 0 0 white;
+					margin-right: 3px;
+					margin-bottom: 3px;
+					// Link Formatting
+					a {
+						font-size: 4vh;
+						color: black;
+						width:100%;
+						text-align: center;
+					}
+					a:link {
+						color: black;
+						text-decoration: none;
+					}
+					a:hover {
+						color: black;
+						text-decoration: none;
+					}
+					a:visited {
+						color: black;
+						text-decoration: none;
+					}
+					a:visited:hover {
+						color: black;
+						text-decoration: none;
+					}
+					a:active {
+						color: black;
+						text-decoration: none;
+					}
 				}
 			}
 		}
@@ -201,3 +220,67 @@ html, body {
 		}
 	}
 }
+
+#content {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+	// For Scrolling
+  margin-bottom: 5vh;
+	#fancyHeader{
+		display: flex;
+		width: 100%;
+		flex-direction: row;
+		gap: 2vh;
+		h1 {
+			font-size: 5vh;
+			margin-bottom: 2vh;
+			margin-left: 0;
+			flex-grow:1;
+		}
+		img {
+			image-rendering: pixelated;
+			margin-bottom: 3vh;
+			margin-top: 3vh;
+		}
+	}
+	#gallery {
+		display: grid;
+		//grid-auto-flow: column;
+		grid-template-columns: repeat(4, 20vw);
+		column-gap: 2vh;
+		justify-content: center;
+		margin-right: auto;
+		margin-left: auto;
+		.polaroid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			img {
+				width: 90%;
+				padding: 1vh;
+				border: $desktopBorder;
+				margin-bottom: 5px;
+				margin-left: 5px;
+			}
+			img:hover {
+				margin-bottom: 0px;
+				margin-left: 0px;
+				margin-top: 5px;
+				margin-right: 5px;
+			}
+			p {
+				font-size: 2vh;
+				margin-top: 1vh;
+				width: 100%;
+				margin-left:5px;
+			}
+		}
+	}
+}
+
+
+
