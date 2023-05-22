@@ -7,14 +7,28 @@ function scrollFix(){
         }
     }
     contentElems = document.getElementsByClassName("content");
+		content = null;
 		for (var elem of contentElems){
 			if (elem.classList[0] == "mobile"){
 				content = elem;
 				break;
 			}
 		}
-    content.style.marginBottom = currFooterBar.offsetHeight + "px"
-		console.log("Fixed Scroll for mobile");
+		description = null;
+		for (var elem of contentElems){
+			if (elem.classList[0] == "mobile"){
+				description = elem;
+				break;
+			}
+		}
+		if (content != null){
+			content.style.marginBottom = currFooterBar.offsetHeight + "px"
+			console.log("Fixed Scroll for mobile");
+		}
+		if (description != null){
+			description.style.marginBottom = currFooterBar.offsetHeight + "px"
+			console.log("Fixed Scroll for mobile");
+		}
 }
 
 window.addEventListener('load', (event) => scrollFix());
