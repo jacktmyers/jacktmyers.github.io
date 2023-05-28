@@ -186,7 +186,7 @@ html, body {
   image-rendering: pixelated;
 }
 
-#content {
+.content {
   display: flex;
   width: fit-content;
   flex-direction: column;
@@ -194,7 +194,7 @@ html, body {
   margin-left: auto;
   margin-bottom: 5vh;
 }
-#content #gallery {
+.content #gallery {
   display: grid;
   grid-template-columns: repeat(4, 20vw);
   column-gap: 2vh;
@@ -202,26 +202,26 @@ html, body {
   margin-right: auto;
   margin-left: auto;
 }
-#content #gallery .polaroid {
+.content #gallery .polaroid {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#content #gallery .polaroid img {
+.content #gallery .polaroid img {
   width: 90%;
   padding: 1vh;
   border: 0.5vh solid;
   margin-bottom: 5px;
   margin-left: 5px;
 }
-#content #gallery .polaroid img:hover {
+.content #gallery .polaroid img:hover {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-top: 5px;
   margin-right: 5px;
 }
-#content #gallery .polaroid p {
+.content #gallery .polaroid p {
   font-size: 2vh;
   margin-top: 1vh;
   width: 100%;
@@ -246,7 +246,7 @@ html, body {
   margin-top: 3vh;
 }
 
-#description {
+.description {
   width: 90vw;
   display: flex;
   flex-direction: column;
@@ -255,7 +255,7 @@ html, body {
   align-items: center;
   margin-bottom: 7vh;
 }
-#description #video {
+.description #video {
   display: flex;
   flex-direction: row;
   width: fit-content;
@@ -263,32 +263,39 @@ html, body {
   margin-bottom: 2vh;
   margin-top: 2vh;
 }
-#description #video iframe {
+.description #video iframe {
   width: 50vw;
   height: 28vw;
   border: 0.5vh solid;
 }
-#description #video img {
+.description #video img {
   width: 5vh;
   height: 5vh;
   margin: 2vh;
   image-rendering: pixelated;
 }
-#description #intro {
+.description #intro {
   font-size: 3vh;
 }
-#description p, #description ul {
+.description p {
   text-align: left;
   font-size: 2.5vh;
   margin-top: 0;
   margin-bottom: 0;
   width: 100%;
-  list-style-type: none;
 }
-#description .pinkP {
+.description ul {
+  text-align: left;
+  font-size: 2.5vh;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  width: 100%;
+}
+.description .pinkP {
   color: #ffa4a4;
 }
-#description #multiPhotos {
+.description #multiPhotos {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -297,13 +304,13 @@ html, body {
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
-#description #multiPhotos img {
+.description #multiPhotos img {
   height: 40vh;
   padding: 1vh;
   border: 0.5vh solid;
   margin: 1vh;
 }
-#description .polaroid {
+.description .polaroid {
   display: flex;
   flex-direction: column;
   margin-left: auto;
@@ -311,17 +318,17 @@ html, body {
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
-#description .polaroid img {
+.description .polaroid img {
   padding: 1vh;
   border: 0.5vh solid;
 }
-#description .polaroid p {
+.description .polaroid p {
   width: 100%;
   margin-top: 0.5vh;
   text-align: center;
   color: #ffa4a4;
 }
-#description .imageAndText {
+.description .imageAndText {
   display: flex;
   flex-direction: row;
   flex-wrap: none;
@@ -330,21 +337,19 @@ html, body {
   align-items: center;
   height: min-content;
 }
-#description .imageAndText p {
+.description .imageAndText p {
   flex-grow: 1;
 }
-#description .imageAndText .leftPhoto {
+.description .imageAndText .leftPhoto {
   height: 25vh;
-  margin-left: 1vh;
+  margin-right: 1vh;
   padding: 1vh;
-  border-color: #ffa4a4;
   border: 0.5vh solid;
 }
-#description .imageAndText .rightPhoto {
+.description .imageAndText .rightPhoto {
   height: 25vh;
-  margin-right: 2vh;
+  margin-left: 2vh;
   padding: 1vh;
-  border-color: #ffa4a4;
   border: 0.5vh solid;
 }
 

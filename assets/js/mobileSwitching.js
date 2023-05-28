@@ -19,6 +19,7 @@ function mobileSwitching(baseDir){
 		}
 		swapStyleSheet(baseDir + "desktop.css");
 		currentLayout = "Desktop";
+		scrollFix(currentLayout)
 	} else if((currRatio >= switchRatio) && (currentLayout != "Mobile")){
 		console.log("Switching Page to Mobile");
 		for (var elem of desktopElems) {
@@ -30,8 +31,10 @@ function mobileSwitching(baseDir){
 		}
 		swapStyleSheet(baseDir + "mobile.css");
 		currentLayout = "Mobile";
+		scrollFix(currentLayout)
 	} else {
 		console.log("Resize detected but no switch necessary");
+		scrollFix(currentLayout)
 	}
 }
 
@@ -49,9 +52,36 @@ function getDirectory(){
 
 }
 
+function scrollFix(switchTo){
+	console.log("running scroll fix")
+	contentElems = document.getElementsByClassName("content");
+	descriptionElems = document.getElementsByClassName("description")
+	if (switchTo == "Mobile") {
+		mobileFooterBar = document.getElementsByClassName("footerBar mobile")
+		if (contentElems.length == 1){
+			contentElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
+			console.log(mobileFooterBar[0].offsetHeight + "=" + contentElems[0].style.marginBottom);
+		}
+		if (descriptionElems.length == 1){
+			descriptionElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
+			console.log(mobileFooterBar[0].offsetHeight + "=" + descriptionElems[0].style.marginBottom);
+		}
+	} else {
+		desktopFooterBar = document.getElementsByClassName("footerBar desktop")
+		if (contentElems.length == 1){
+			contentElems[0].style.marginBottom =	desktopFooterBar[0].offsetHeight+"px"
+		}
+		if (descriptionElems.length == 1){
+			descriptionElems[0].style.marginBottom =	desktopFooterBar[0].offsetHeight+"px"
+		}
+	}
+}
+
 var currentLayout;
+var descMargin;
+var contMargin;
 var baseDir = getDirectory();
-document.onload = mobileSwitching(baseDir);
+addEventListener("load", (event) => mobileSwitching(baseDir))
 addEventListener("resize", (event) => mobileSwitching(baseDir));
 
 

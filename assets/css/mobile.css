@@ -197,32 +197,35 @@ html, body {
   image-rendering: pixelated;
 }
 
-#content {
+#fancyHeader {
+  margin-top: 2vh;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  margin-right: auto;
+  gap: 2vw;
+}
+#fancyHeader img {
+  width: 5vw;
+  height: 5vw;
+  image-rendering: pixelated;
+}
+
+h1 {
+  font-size: 9vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 100%;
+}
+
+.content {
   margin-left: auto;
   margin-right: auto;
   display: flex;
   width: fit-content;
   flex-direction: column;
 }
-#content #fancyHeader {
-  margin-top: 2vh;
-  display: flex;
-  flex-direction: row;
-  width: fit-content;
-  gap: 2vw;
-}
-#content #fancyHeader img {
-  width: 5vw;
-  height: 5vw;
-  image-rendering: pixelated;
-}
-#content h1 {
-  font-size: 9vw;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
-  width: 100%;
-}
-#content #gallery {
+.content #gallery {
   display: grid;
   grid-template-columns: repeat(2, 40vw);
   column-gap: 2vw;
@@ -230,31 +233,109 @@ html, body {
   margin-left: auto;
   margin-right: auto;
 }
-#content #gallery .polaroid {
+.content #gallery .polaroid {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#content #gallery .polaroid img {
+.content #gallery .polaroid img {
   width: 90%;
   padding: 1vw;
   border: 0.2em solid;
   margin-bottom: 5px;
   margin-left: 5px;
 }
-#content #gallery .polaroid img:hover {
+.content #gallery .polaroid img:hover {
   margin-bottom: 0px;
   margin-left: 0px;
   margin-top: 5px;
   margin-right: 5px;
 }
-#content #gallery .polaroid p {
+.content #gallery .polaroid p {
   margin-top: 0.5vh;
   font-size: 4vw;
   margin-left: 5px;
   width: 100%;
   text-align: left;
+}
+
+.description {
+  display: flex;
+  width: 90vw;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  align-items: center;
+}
+.description #video {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.description #video iframe {
+  width: 70vw;
+  height: 39vw;
+}
+.description #video img {
+  flex-grow: 1;
+  image-rendering: pixelated;
+  margin: 2vw;
+}
+.description #intro {
+  font-size: 4.5vw;
+}
+.description p {
+  text-align: left;
+  font-size: 4vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  width: 100%;
+}
+.description ul {
+  text-align: left;
+  font-size: 4vw;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 5vw;
+}
+.description .pinkP {
+  color: #ffa4a4;
+}
+.description #multiPhotos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+.description #multiPhotos img {
+  padding: 1vw;
+  border: 0.2em solid;
+  margin: 1vh;
+}
+.description .polaroid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+.description .polaroid img {
+  padding: 1vh;
+  border: 0.2em solid;
+}
+.description .polaroid p {
+  width: 100%;
+  margin-top: 0.5vh;
+  text-align: center;
+  color: #ffa4a4;
 }
 
 /*# sourceMappingURL=mobile.css.map */

@@ -216,30 +216,32 @@ html, body {
 	}
 }
 
-#content {
+#fancyHeader {
+	margin-top: 2vh;
+	display: flex;
+	flex-direction: row;
+	width:fit-content;
+	margin-right: auto;
+	gap: 2vw;
+	img {
+		width: 5vw;	
+		height: 5vw;	
+		image-rendering: pixelated;
+	}
+}
+h1 {
+	font-size: 9vw;	
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	width: 100%;
+}
+
+.content {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
 	width: fit-content;
 	flex-direction: column;
-	#fancyHeader {
-		margin-top: 2vh;
-		display: flex;
-		flex-direction: row;
-		width:fit-content;
-		gap: 2vw;
-		img {
-			width: 5vw;	
-			height: 5vw;	
-			image-rendering: pixelated;
-		}
-	}
-	h1 {
-		font-size: 9vw;	
-		margin-top: 1vh;
-		margin-bottom: 1vh;
-		width: 100%;
-	}
 	#gallery {
 		display: grid;
 		grid-template-columns: repeat(2, 40vw);
@@ -268,6 +270,7 @@ html, body {
 			p {
 				margin-top: .5vh;
 				font-size: 4vw;
+
 				margin-left: 5px;
 				width: 100%;
 				text-align: left;
@@ -276,7 +279,85 @@ html, body {
 	}
 }
 
+$descriptionWidth: 90vw;
 
+.description {
+	display: flex;
+	width: $descriptionWidth;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	align-items: center;
+	#video {
+		display: flex;
+		width: 100%;
+		align-items: center;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		iframe {
+				width: 70vw;	
+				height: 39vw;
+		}
+		img {
+			flex-grow: 1;
+			image-rendering: pixelated;
+			margin: 2vw;
+		}
+	}
+	#intro {
+		font-size: 4.5vw;
+	}
+	p {
+		text-align: left;
+		font-size: 4vw;
+		margin-top: 0;
+		margin-bottom:0;
+		width: 100%;
+	}
+	ul {
+		text-align: left;
+		font-size: 4vw;
+		margin-top: 0;
+		margin-bottom:0;
+		list-style-type: none;
+		padding-left: 5vw;
+	}
+	.pinkP {
+		color: $pinkColor;
+	}
+	#multiPhotos {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+		img {
+			padding: 1vw;
+			border: $mobileBorder;
+			margin: 1vh;
+		}
+	}
+	.polaroid {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		img {
+			padding: 1vh;
+			border: $mobileBorder;
+		}
+		p {
+			width: 100%;
+			margin-top: .5vh;
+			text-align: center;
+			color: $pinkColor;
+		}
+	}
+}
 
 
 

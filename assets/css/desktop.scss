@@ -221,7 +221,7 @@ html, body {
 	}
 }
 
-#content {
+.content {
 	display: flex;
 	width: fit-content;
 	flex-direction: column;
@@ -283,7 +283,7 @@ html, body {
 	}
 }
 
-#description {
+.description {
 	width: 90vw;
 	display: flex;
 	flex-direction: column;
@@ -313,13 +313,20 @@ html, body {
 	#intro {
 		font-size: 3vh;
 	}
-	p, ul{
+	p {
 		text-align: left;
 		font-size: 2.5vh;
 		margin-top: 0;
 		margin-bottom:0;
 		width: 100%;
+	}
+	ul {
+		text-align: left;
+		font-size: 2.5vh;
+		margin-top: 0;
+		margin-bottom:0;
 		list-style-type: none;
+		width: 100%;
 	}
 	.pinkP {
 		color: $pinkColor;
@@ -370,16 +377,14 @@ html, body {
 		}
 		.leftPhoto {
 			height: 25vh;	
-			margin-left: 1vh;
+			margin-right: 1vh;
 			padding: 1vh;
-			border-color: $pinkColor;
 			border: $desktopBorder;
 		}
 		.rightPhoto {
 			height: 25vh;	
-			margin-right: 2vh;
+			margin-left: 2vh;
 			padding: 1vh;
-			border-color: $pinkColor;
 			border: $desktopBorder;
 		}
 	}

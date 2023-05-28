@@ -1,7 +1,18 @@
+function isMobile(element){
+	for (var elemClass of element.classList) {
+		console.log(elemClass)
+		if (elemClass == "mobile"){
+			return true;
+		}
+	}
+	return false;
+}
+
 function scrollFix(){
+	console.log("running scroll fix")
     footerBars = document.getElementsByClassName("footerBar")
     for(var elem of footerBars){
-        if (elem.classList[1] == "mobile"){
+        if (isMobile(elem)){
             currFooterBar = elem
             break;
         }
@@ -9,14 +20,14 @@ function scrollFix(){
     contentElems = document.getElementsByClassName("content");
 		content = null;
 		for (var elem of contentElems){
-			if (elem.classList[0] == "mobile"){
+			if (isMobile(elem)){
 				content = elem;
 				break;
 			}
 		}
 		description = null;
 		for (var elem of contentElems){
-			if (elem.classList[0] == "mobile"){
+			if (isMobile(elem)){
 				description = elem;
 				break;
 			}
@@ -31,5 +42,5 @@ function scrollFix(){
 		}
 }
 
-window.addEventListener('load', (event) => scrollFix());
+addEventListener("load", (event) => scrollFix());
 addEventListener("resize", (event) => scrollFix());
