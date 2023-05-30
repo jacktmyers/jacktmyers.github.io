@@ -253,7 +253,7 @@ h1 {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			justify-content: center;
+			justify-content: flex-start;
 			img {
 				width: 90%;
 				padding: 1vw;
@@ -273,8 +273,28 @@ h1 {
 
 				margin-left: 5px;
 				width: 100%;
-				text-align: left;
+				text-align: center;
 			}
+		}
+		a:link {
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			color: white;
+			text-decoration: none;
+		}
+		a:visited {
+			color: white;
+			text-decoration: none;
+		}
+		a:visited:hover {
+			color: white;
+			text-decoration: none;
+		}
+		a:active {
+			color: white;
+			text-decoration: none;
 		}
 	}
 }

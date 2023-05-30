@@ -1,6 +1,6 @@
-function mobileSwitching(baseDir){
-	// We want to switch to mobile if h/l > 1
-	// We want to switch to deskto if h/l < 1
+function mobileSwitching(baseDir, firstRun){
+	// We want to switch to mobile if h/l > 1.1
+	// We want to switch to desktop if h/l < 1.1
 	const switchRatio = 1.1;
 	var currRatio = window.innerHeight / window.innerWidth;
 
@@ -19,7 +19,9 @@ function mobileSwitching(baseDir){
 		}
 		swapStyleSheet(baseDir + "desktop.css");
 		currentLayout = "Desktop";
-		scrollFix(currentLayout)
+		if (!firstRun){
+			scrollFix(currentLayout)
+		}
 	} else if((currRatio >= switchRatio) && (currentLayout != "Mobile")){
 		console.log("Switching Page to Mobile");
 		for (var elem of desktopElems) {
@@ -31,10 +33,14 @@ function mobileSwitching(baseDir){
 		}
 		swapStyleSheet(baseDir + "mobile.css");
 		currentLayout = "Mobile";
-		scrollFix(currentLayout)
+		if (!firstRun){
+			scrollFix(currentLayout)
+		}
 	} else {
 		console.log("Resize detected but no switch necessary");
-		scrollFix(currentLayout)
+		if (!firstRun){
+			scrollFix(currentLayout)
+		}
 	}
 }
 
@@ -81,7 +87,8 @@ var currentLayout;
 var descMargin;
 var contMargin;
 var baseDir = getDirectory();
-addEventListener("load", (event) => mobileSwitching(baseDir))
-addEventListener("resize", (event) => mobileSwitching(baseDir));
+document.onload = mobileSwitching(baseDir, true)
+addEventListener("load", (event) => mobileSwitching(baseDir, false))
+addEventListener("resize", (event) => mobileSwitching(baseDir, false));
 
 
