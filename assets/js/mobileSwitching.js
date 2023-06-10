@@ -42,6 +42,8 @@ function mobileSwitching(baseDir, firstRun){
 			scrollFix(currentLayout)
 		}
 	}
+	loadingScreen = document.getElementById("loading")
+	loadingScreen.style.display = "none"
 }
 
 function swapStyleSheet(sheet) {

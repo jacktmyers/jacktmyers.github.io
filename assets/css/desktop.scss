@@ -15,6 +15,18 @@ $mobileHeight: 500px;
   src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
 }
 
+#loading {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: black;
+  z-index: 99;
+}
+
 // Global Background and Font
 body {
   font-family: imbVga;
