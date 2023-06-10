@@ -6,6 +6,9 @@ $pinkPressed: #d38787;
 $desktopBorder: 0.5vh solid;
 $pinkDesktopBorder: 0.5vh solid $pinkColor;
 
+// Switching Height
+$mobileHeight: 500px;
+
 // Font Setup
 @font-face {
   font-family: imbVga;
@@ -35,7 +38,12 @@ html, body {
   align-items: center;
   justify-content: center;
 	border-bottom: $desktopBorder;
-	height: 5vh;
+	@media (max-height: $mobileHeight) {
+		height: 10vh;
+	}
+	@media (min-height: $mobileHeight) {
+		height: 5vh;
+	}
 	// Link
 	a {
 		// Always Set
@@ -53,7 +61,12 @@ html, body {
 #splashScreenFancy {
 	display: flex;
 	width: fit-content;
-	height: 40vh;
+	@media (max-height: $mobileHeight) {
+		height: 70vh;
+	}
+	@media (min-height: $mobileHeight) {
+		height: 40vh;
+	}
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -65,9 +78,16 @@ html, body {
 		justify-content: center;
 		img {
 			image-rendering: pixelated;
-			width: 4vh;
-			height: 4vh;
-			margin: 1vh;
+			@media (max-height: $mobileHeight) {
+				width: 8vh;
+				height: 8vh;
+				margin: 2vh;
+			}
+			@media (min-height: $mobileHeight) {
+				width: 4vh;
+				height: 4vh;
+				margin: 1vh;
+			}
 		}
 	}
 	#splashScreen {
@@ -75,8 +95,14 @@ html, body {
 		display: flex;
 		padding: 0.5vh;
 		flex-direction: row;
-		height: 40vh;
-		width: 75vh;
+		@media (max-height: $mobileHeight) {
+			height: 70vh;
+			width: 130vh;
+		}
+		@media (min-height: $mobileHeight) {
+			height: 40vh;
+			width: 75vh;
+		}
 		border: $desktopBorder;
 		// Headshot Picture
 		#headshot {
@@ -95,7 +121,12 @@ html, body {
 			align-items: center;
 			// Typed Element
 			h1 {
-				font-size: 5vh;
+				@media (max-height: $mobileHeight) {
+					font-size: 10vh;
+				}
+				@media (min-height: $mobileHeight) {
+					font-size: 5vh;
+				}
 				padding: 0;
 				margin: 0;
 			}
@@ -132,7 +163,12 @@ html, body {
 					margin-bottom: 3px;
 					// Link Formatting
 					a {
-						font-size: 4vh;
+						@media (max-height: $mobileHeight) {
+							font-size: 8vh;
+						}
+						@media (min-height: $mobileHeight) {
+							font-size: 4vh;
+						}
 						color: black;
 						width:100%;
 						text-align: center;
@@ -173,12 +209,22 @@ html, body {
 	// Make it at the bottom
   top: 100%;
   transform: translate(0%, -100%);
-  height: 5vh;
+	@media (max-height: $mobileHeight) {
+  	height: 10vh;
+	}
+	@media (min-height: $mobileHeight) {
+  	height: 5vh;
+	}
   width: 100%;
 	border-top: $desktopBorder;
 	// Source Code link
 	#sourceCode {
-		font-size: 2vh;
+		@media (max-height: $mobileHeight) {
+			font-size: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2vh;
+		}
 		display: flex;
 		flex-direction: row;
 		margin-left: 0.5vw;
@@ -256,7 +302,12 @@ html, body {
 				margin-right: 5px;
 			}
 			p {
-				font-size: 2vh;
+				@media (max-height: $mobileHeight) {
+					font-size: 4vh;
+				}
+				@media (min-height: $mobileHeight) {
+					font-size: 2vh;
+				}
 				margin-top: 1vh;
 				width: 100%;
 				text-align: center;
@@ -290,18 +341,38 @@ html, body {
 	display: flex;
 	width: 100%;
 	flex-direction: row;
-	gap: 2vh;
+	@media (max-height: $mobileHeight) {
+		gap: 4vh;
+	}
+	@media (min-height: $mobileHeight) {
+		gap: 2vh;
+	}
 	h1 {
-		font-size: 5vh;
-		margin-bottom: 2vh;
+		@media (max-height: $mobileHeight) {
+			font-size: 10vh;
+			margin-top: 4vh;
+			margin-bottom: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 5vh;
+			margin-top: 2vh;
+			margin-bottom: 2vh;
+		}
 		margin-left: 0;
 		flex-grow:1;
 	}
 	img {
+		@media (max-height: $mobileHeight) {
+			height: 10vh;
+			margin-bottom: 4vh;
+			margin-top: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			height: 5vh;
+			margin-bottom: 2vh;
+			margin-top: 2vh;
+		}
 		image-rendering: pixelated;
-		margin-bottom: 3vh;
-		margin-top: 3vh;
-		height: 5vh;
 	}
 }
 
@@ -333,18 +404,33 @@ html, body {
 		}
 	}
 	#intro {
-		font-size: 3vh;
+		@media (max-height: $mobileHeight) {
+			font-size: 6vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 3vh;
+		}
 	}
 	p {
+		@media (max-height: $mobileHeight) {
+			font-size: 5vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2.5vh;
+		}
 		text-align: left;
-		font-size: 2.5vh;
 		margin-top: 0;
 		margin-bottom:0;
 		width: 100%;
 	}
 	ul {
+		@media (max-height: $mobileHeight) {
+			font-size: 5vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2.5vh;
+		}
 		text-align: left;
-		font-size: 2.5vh;
 		margin-top: 0;
 		margin-bottom:0;
 		list-style-type: none;

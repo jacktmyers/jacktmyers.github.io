@@ -66,11 +66,9 @@ function scrollFix(switchTo){
 		mobileFooterBar = document.getElementsByClassName("footerBar mobile")
 		if (contentElems.length == 1){
 			contentElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
-			console.log(mobileFooterBar[0].offsetHeight + "=" + contentElems[0].style.marginBottom);
 		}
 		if (descriptionElems.length == 1){
 			descriptionElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
-			console.log(mobileFooterBar[0].offsetHeight + "=" + descriptionElems[0].style.marginBottom);
 		}
 	} else {
 		desktopFooterBar = document.getElementsByClassName("footerBar desktop")
