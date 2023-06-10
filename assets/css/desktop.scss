@@ -1,0 +1,502 @@
+// Color Palate
+$pinkColor: #ffa4a4;
+$pinkPressed: #d38787;
+
+// Desktop/Mobile Border
+$desktopBorder: 0.5vh solid;
+$pinkDesktopBorder: 0.5vh solid $pinkColor;
+
+// Switching Height
+$mobileHeight: 500px;
+
+// Font Setup
+@font-face {
+  font-family: imbVga;
+  src: url("../webfonts/Web437_IBM_VGA_8x16.woff") format("woff");
+}
+
+// Global Background and Font
+body {
+  font-family: imbVga;
+  color: white;
+  background-color: black;
+}
+
+// Fill the Whole Page
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+// Homebar
+.homeBar {
+	// Always Set
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	border-bottom: $desktopBorder;
+	@media (max-height: $mobileHeight) {
+		height: 10vh;
+	}
+	@media (min-height: $mobileHeight) {
+		height: 5vh;
+	}
+	// Link
+	a {
+		// Always Set
+		display: flex;
+		height: 100%;
+		// Title Image
+		img {
+			height: 100%;
+			image-rendering: pixelated;
+		}
+	}
+}
+
+// Centered Menu
+#splashScreenFancy {
+	display: flex;
+	width: fit-content;
+	@media (max-height: $mobileHeight) {
+		height: 70vh;
+	}
+	@media (min-height: $mobileHeight) {
+		height: 40vh;
+	}
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	.borderElements {
+		display: flex;
+		height: 100%;
+		flex-direction: column;
+		justify-content: center;
+		img {
+			image-rendering: pixelated;
+			@media (max-height: $mobileHeight) {
+				width: 8vh;
+				height: 8vh;
+				margin: 2vh;
+			}
+			@media (min-height: $mobileHeight) {
+				width: 4vh;
+				height: 4vh;
+				margin: 1vh;
+			}
+		}
+	}
+	#splashScreen {
+		// Always Set
+		display: flex;
+		padding: 0.5vh;
+		flex-direction: row;
+		@media (max-height: $mobileHeight) {
+			height: 70vh;
+			width: 130vh;
+		}
+		@media (min-height: $mobileHeight) {
+			height: 40vh;
+			width: 75vh;
+		}
+		border: $desktopBorder;
+		// Headshot Picture
+		#headshot {
+			height: 100%;
+		}
+		// Second Div
+		#navList {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			width: 50%;
+			padding-left: 0.5vw;
+			padding-right: 0.5vw;
+			padding-top: 0.2vh;
+			justify-content: flex-start;
+			align-items: center;
+			// Typed Element
+			h1 {
+				@media (max-height: $mobileHeight) {
+					font-size: 10vh;
+				}
+				@media (min-height: $mobileHeight) {
+					font-size: 5vh;
+				}
+				padding: 0;
+				margin: 0;
+			}
+			// Buttons Div
+			#navButtons {
+				display: flex;
+				flex-grow: 1;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+				gap: 7%;
+				// Button
+				.pinkButton:hover {
+					box-shadow: 3px 3px 0 0 black;
+					background-color: $pinkColor;
+					margin-left: 3px;
+					margin-top: 3px;
+					margin-right: 0px;
+					margin-bottom: 0px;
+				}
+				.pinkButton {
+					display: flex;
+					flex-direction: row;
+					background-color: $pinkColor;
+					align-items: center;
+					justify-content: center;
+					width: 80%;
+					height: 17%;
+					padding-left: 15px;
+					padding-right: 15px;
+					box-shadow: 3px 3px 0 0 white;
+					margin-right: 3px;
+					margin-bottom: 3px;
+					// Link Formatting
+					a {
+						@media (max-height: $mobileHeight) {
+							font-size: 8vh;
+						}
+						@media (min-height: $mobileHeight) {
+							font-size: 4vh;
+						}
+						color: black;
+						width:100%;
+						text-align: center;
+					}
+					a:link {
+						color: black;
+						text-decoration: none;
+					}
+					a:hover {
+						color: black;
+						text-decoration: none;
+					}
+					a:visited {
+						color: black;
+						text-decoration: none;
+					}
+					a:visited:hover {
+						color: black;
+						text-decoration: none;
+					}
+					a:active {
+						color: black;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Footer Bar
+.footerBar {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+	// Make it at the bottom
+  top: 100%;
+  transform: translate(0%, -100%);
+	@media (max-height: $mobileHeight) {
+  	height: 10vh;
+	}
+	@media (min-height: $mobileHeight) {
+  	height: 5vh;
+	}
+  width: 100%;
+	border-top: $desktopBorder;
+	// Source Code link
+	#sourceCode {
+		@media (max-height: $mobileHeight) {
+			font-size: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2vh;
+		}
+		display: flex;
+		flex-direction: row;
+		margin-left: 0.5vw;
+		// Text
+		p {
+			justify-content: center;
+			margin-top: 0;
+			margin-bottom: 0;
+			height: 100%;
+		}
+		// Actual Link
+		a {
+			height: 100%;
+		}
+		// Link formatting
+		a:link, a:visited {
+			color: $pinkColor;
+		}
+
+		a:hover, a:visited:hover, a:active {
+			color: white;
+		}
+	}
+	// Social Buttons
+	#socials {
+		display: flex;
+		flex-direction: row;
+		margin-right: 0.1vw;
+		margin-left: auto;
+		height: 100%;
+	}
+	// Link Formatting
+	a {
+		height: 100%;
+		// Button Scaling
+		img {
+			height: 100%;
+			image-rendering: pixelated;
+		}
+	}
+}
+
+.content {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	margin-right: auto;
+	margin-left: auto;
+	// For Scrolling
+  margin-bottom: 5vh;
+	#gallery {
+		display: grid;
+		//grid-auto-flow: column;
+		grid-template-columns: repeat(4, 20vw);
+		column-gap: 2vh;
+		justify-content: center;
+		margin-right: auto;
+		margin-left: auto;
+		.polaroid {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			img {
+				width: 90%;
+				padding: 1vh;
+				border: $desktopBorder;
+				margin-bottom: 5px;
+				margin-left: 5px;
+			}
+			img:hover {
+				margin-bottom: 0px;
+				margin-left: 0px;
+				margin-top: 5px;
+				margin-right: 5px;
+			}
+			p {
+				@media (max-height: $mobileHeight) {
+					font-size: 4vh;
+				}
+				@media (min-height: $mobileHeight) {
+					font-size: 2vh;
+				}
+				margin-top: 1vh;
+				width: 100%;
+				text-align: center;
+				margin-left:5px;
+			}
+		}
+		a:link {
+			color: white;
+			text-decoration: none;
+		}
+		a:hover {
+			color: white;
+			text-decoration: none;
+		}
+		a:visited {
+			color: white;
+			text-decoration: none;
+		}
+		a:visited:hover {
+			color: white;
+			text-decoration: none;
+		}
+		a:active {
+			color: white;
+			text-decoration: none;
+		}
+	}
+}
+
+#fancyHeader{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	@media (max-height: $mobileHeight) {
+		gap: 4vh;
+	}
+	@media (min-height: $mobileHeight) {
+		gap: 2vh;
+	}
+	h1 {
+		@media (max-height: $mobileHeight) {
+			font-size: 10vh;
+			margin-top: 4vh;
+			margin-bottom: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 5vh;
+			margin-top: 2vh;
+			margin-bottom: 2vh;
+		}
+		margin-left: 0;
+		flex-grow:1;
+	}
+	img {
+		@media (max-height: $mobileHeight) {
+			height: 10vh;
+			margin-bottom: 4vh;
+			margin-top: 4vh;
+		}
+		@media (min-height: $mobileHeight) {
+			height: 5vh;
+			margin-bottom: 2vh;
+			margin-top: 2vh;
+		}
+		image-rendering: pixelated;
+	}
+}
+
+.description {
+	width: 90vw;
+	display: flex;
+	flex-direction: column;
+	margin-left: auto;
+	margin-right: auto;
+	align-items: center;
+	margin-bottom: 7vh;
+	#video {
+		display: flex;
+		flex-direction: row;
+		width: fit-content;
+		align-items: center;
+		margin-bottom: 2vh;
+		margin-top: 2vh;
+		iframe {
+			width: 50vw;
+			height: 28vw;
+			border: $desktopBorder;
+		}
+		img {
+			width: 5vh;
+			height: 5vh;
+			margin: 2vh;
+			image-rendering: pixelated;
+		}
+	}
+	#intro {
+		@media (max-height: $mobileHeight) {
+			font-size: 6vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 3vh;
+		}
+	}
+	p {
+		@media (max-height: $mobileHeight) {
+			font-size: 5vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2.5vh;
+		}
+		text-align: left;
+		margin-top: 0;
+		margin-bottom:0;
+		width: 100%;
+	}
+	ul {
+		@media (max-height: $mobileHeight) {
+			font-size: 5vh;
+		}
+		@media (min-height: $mobileHeight) {
+			font-size: 2.5vh;
+		}
+		text-align: left;
+		margin-top: 0;
+		margin-bottom:0;
+		list-style-type: none;
+		width: 100%;
+	}
+	.pinkP {
+		color: $pinkColor;
+	}
+	#multiPhotos {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		margin-top: 1vh;
+		margin-bottom: 1vh;
+		img {
+			height: 40vh;
+			padding: 1vh;
+			border: $desktopBorder;
+			margin: 1vh;
+		}
+	}
+	.polaroid {
+		display: flex;
+		flex-direction: column;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2vh;
+		margin-bottom: 2vh;
+		img {
+			padding: 1vh;
+			border: $desktopBorder;
+			margin-left:auto;
+			margin-right: auto;
+		}
+		p {
+			width: 100%;
+			margin-top: .5vh;
+			text-align: center;
+			color: $pinkColor;
+		}
+	}
+	.imageAndText {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: none;
+		margin-bottom: 2vh;
+		margin-top: 2vh;
+		align-items: center;
+		height: min-content;
+		p {	
+			flex-grow: 1;		
+		}
+		.leftPhoto {
+			height: 25vh;	
+			margin-right: 1vh;
+			padding: 1vh;
+			border: $desktopBorder;
+		}
+		.rightPhoto {
+			height: 25vh;	
+			margin-left: 2vh;
+			padding: 1vh;
+			border: $desktopBorder;
+		}
+	}
+}
+
