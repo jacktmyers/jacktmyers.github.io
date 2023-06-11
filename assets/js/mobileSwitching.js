@@ -48,7 +48,6 @@ function getDirectory(){
 	const baseDirPattern = new RegExp("\/[^\/]*$");
 	var fileName = fullPath.match(baseDirPattern);
 	return fullPath.substring(0,fullPath.length-fileName[0].length+1);
-
 }
 
 var currentLayout;
