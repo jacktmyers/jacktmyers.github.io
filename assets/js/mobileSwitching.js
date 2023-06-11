@@ -1,4 +1,4 @@
-function mobileSwitching(baseDir, firstRun){
+function mobileSwitching(baseDir){
 	// We want to switch to mobile if h/l > 1.1
 	// We want to switch to desktop if h/l < 1.1
 	const switchRatio = 1.1;
@@ -19,9 +19,6 @@ function mobileSwitching(baseDir, firstRun){
 		}
 		swapStyleSheet(baseDir + "desktop.css");
 		currentLayout = "Desktop";
-		if (!firstRun){
-			scrollFix(currentLayout)
-		}
 	} else if((currRatio >= switchRatio) && (currentLayout != "Mobile")){
 		console.log("Switching Page to Mobile");
 		for (var elem of desktopElems) {
@@ -33,14 +30,8 @@ function mobileSwitching(baseDir, firstRun){
 		}
 		swapStyleSheet(baseDir + "mobile.css");
 		currentLayout = "Mobile";
-		if (!firstRun){
-			scrollFix(currentLayout)
-		}
 	} else {
 		console.log("Resize detected but no switch necessary");
-		if (!firstRun){
-			scrollFix(currentLayout)
-		}
 	}
 	loadingScreen = document.getElementById("loading")
 	loadingScreen.style.display = "none"
@@ -60,35 +51,11 @@ function getDirectory(){
 
 }
 
-function scrollFix(switchTo){
-	console.log("running scroll fix")
-	contentElems = document.getElementsByClassName("content");
-	descriptionElems = document.getElementsByClassName("description")
-	if (switchTo == "Mobile") {
-		mobileFooterBar = document.getElementsByClassName("footerBar mobile")
-		if (contentElems.length == 1){
-			contentElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
-		}
-		if (descriptionElems.length == 1){
-			descriptionElems[0].style.marginBottom =	mobileFooterBar[0].offsetHeight+"px"
-		}
-	} else {
-		desktopFooterBar = document.getElementsByClassName("footerBar desktop")
-		if (contentElems.length == 1){
-			contentElems[0].style.marginBottom =	desktopFooterBar[0].offsetHeight+"px"
-		}
-		if (descriptionElems.length == 1){
-			descriptionElems[0].style.marginBottom =	desktopFooterBar[0].offsetHeight+"px"
-		}
-	}
-}
-
 var currentLayout;
 var descMargin;
 var contMargin;
 var baseDir = getDirectory();
-document.onload = mobileSwitching(baseDir, true)
-addEventListener("load", (event) => mobileSwitching(baseDir, false))
-addEventListener("resize", (event) => mobileSwitching(baseDir, false));
+addEventListener("load", (event) => mobileSwitching(baseDir))
+addEventListener("resize", (event) => mobileSwitching(baseDir));
 
 

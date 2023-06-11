@@ -217,10 +217,10 @@ html, body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: fixed;
+  position: sticky;
 	// Make it at the bottom
   top: 100%;
-  transform: translate(0%, -100%);
+  //transform: translate(0%, -100%);
 	@media (max-height: $mobileHeight) {
   	height: 10vh;
 	}
@@ -285,8 +285,7 @@ html, body {
 	flex-direction: column;
 	margin-right: auto;
 	margin-left: auto;
-	// For Scrolling
-  margin-bottom: 5vh;
+  margin-bottom: 0;
 	#gallery {
 		display: grid;
 		//grid-auto-flow: column;
@@ -395,7 +394,7 @@ html, body {
 	margin-left: auto;
 	margin-right: auto;
 	align-items: center;
-	margin-bottom: 7vh;
+	margin-bottom: 0;
 	#video {
 		display: flex;
 		flex-direction: row;

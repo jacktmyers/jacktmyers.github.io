@@ -177,10 +177,10 @@ html, body {
 	align-items: center;
 	justify-content: center;
 	width: 100%;
-	position: fixed;
+	position: sticky;
 	top: 100%;
 	height: fit-content; 
-  transform: translate(0%, -100%);
+  //transform: translate(0%, -100%);
 	border-top: $mobileBorder;
 	#sourceCode {
 		font-size: 5vw;
@@ -254,6 +254,7 @@ h1 {
 	display: flex;
 	width: fit-content;
 	flex-direction: column;
+	margin-bottom: 0;
 	#gallery {
 		display: grid;
 		grid-template-columns: repeat(2, 40vw);
@@ -321,6 +322,7 @@ $descriptionWidth: 90vw;
 	margin-right: auto;
 	margin-top: 0;
 	align-items: center;
+	margin-bottom: 0;
 	#video {
 		display: flex;
 		width: 100%;

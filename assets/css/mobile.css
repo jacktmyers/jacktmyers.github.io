@@ -160,10 +160,9 @@ html, body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 100%;
   height: fit-content;
-  transform: translate(0%, -100%);
   border-top: 0.2em solid;
 }
 .footerBar #sourceCode {
@@ -236,6 +235,7 @@ h1 {
   display: flex;
   width: fit-content;
   flex-direction: column;
+  margin-bottom: 0;
 }
 .content #gallery {
   display: grid;
@@ -300,6 +300,7 @@ h1 {
   margin-right: auto;
   margin-top: 0;
   align-items: center;
+  margin-bottom: 0;
 }
 .description #video {
   display: flex;
