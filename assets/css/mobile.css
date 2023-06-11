@@ -63,7 +63,7 @@ html, body {
 }
 #splashScreen h1 {
   position: absolute;
-  bottom: 100%;
+  bottom: 101%;
   width: 100%;
   left: 0%;
   text-align: center;
