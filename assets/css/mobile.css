@@ -14,6 +14,14 @@
   z-index: 99;
 }
 
+a {
+  color: #ffa4a4;
+}
+
+a:hover {
+  color: white;
+}
+
 body {
   font-family: imbVga;
   color: white;
@@ -233,7 +241,7 @@ h1 {
   margin-left: auto;
   margin-right: auto;
   display: flex;
-  width: fit-content;
+  padding: 6vw;
   flex-direction: column;
   margin-bottom: 0;
 }
@@ -351,6 +359,10 @@ h1 {
   padding: 1vw;
   border: 0.2em solid;
   margin: 1vh;
+}
+.description #multiPhotos .polaroid {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .description .polaroid {
   display: flex;

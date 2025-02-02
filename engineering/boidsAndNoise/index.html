@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Boids & Noise</title>
+		<link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/desktop.css" />
+	</head>
+    <body>
+ 		<div class = "homeBar">
+			<a href = "https://www.jacktmyers.com">
+				<img src="../../assets/img/websiteName.png"
+				alt="JACKTMYERS.COM"
+				onmouseover="hover(this);"
+				onmouseout="hoverOut(this);"
+				>
+			</a>
+		</div>
+		<div class="description">
+			<div id="fancyHeader" class="desktop">
+				<h1 class="typed" id="Boids & Noise"></h1>
+				<img src="../../assets/img/fancy1.png">
+				<img src="../../assets/img/fancy21.png">
+				<img src="../../assets/img/fancy21.png">
+			</div>
+			<div id="fancyHeader" class="mobile">
+				<img src="../../assets/img/fancy1.png">
+				<img src="../../assets/img/fancy21.png">
+				<img src="../../assets/img/fancy21.png">
+			</div>
+			<h1 class="typed mobile" id="Boids & Noise"></h1>
+			<p id="intro"> </p>
+			<div class="imageAndText desktop">
+				<img class="leftPhoto" src="../img/boidsAndNoise/canadaScaled.jpg">
+				<p id="intro">The idea for this fun mess-around project was on a trip in Canada. While looking out at the lake I began to think about the birds flying above and their electronic look-alike <a href="https://www.youtube.com/watch?v=bqtqltqcQhw"> Boids.</a> I thought it would be fun to see if I could get realistic water behavior by adding a few more rules to the boid movement.
+				</p>
+			</div>
+			<!-- Mobile Elements -->
+			<p class="mobile" id="intro">The idea for this fun mess-around project was on a trip in Canada. While looking out at the lake I began to think about the birds flying above and their electronic look-alike <a href="https://www.youtube.com/watch?v=bqtqltqcQhw"> Boids.</a> I thought it would be fun to see if I could get realistic water behavior by adding a few more rules to the boid movement.
+			</p>
+			<div class="polaroid mobile">
+				<img class="leftPhoto" src="../img/boidsAndNoise/canadaScaled.jpg" style="width: 60vw;">
+			</div>
+			<!---->
+			<p>
+				The first thing I needed to do was get boids moving in Unity, which was pretty straight forward with the help of this great <a href="https://vanhunteradams.com/Pico/Animal_Movement/Boids-algorithm.html">write up.</a>
+				<br>
+				From this point on I wanted to take the positions of all the boids and turn it into a texture to be displayed onto the background. To do this I would create a separate texture for each boid that would contain a float at each texel describing the distance from the boid. The screen distance was scaled using the largest possible distance: the diagonal distance from the top left corner to the bottom right. With each iteration of this shader the aggregate texture is updated with the current texel only replacing the existing one if the distance is lower.
+			</p>
+			<p style="text-align: center;">
+				<br>
+				Below is a picture of texture with one point, and a texture aggregated with multiple points.
+			</p>
+			<div id="multiPhotos">
+				<img class="desktop" style="height: 25vh;" src="../img/boidsAndNoise/singleDistance.png">
+				<img class="mobile" style="width: 60vw;" src="../img/boidsAndNoise/singleDistance.png">
+				<img class="desktop" style="height: 25vh;" src="../img/boidsAndNoise/multipleDistance.png">
+				<img class="mobile" style="width: 60vw;" src="../img/boidsAndNoise/multipleDistance.png">
+			</div>
+			<p>
+				It was at this point that I realized the boids in this texture kind of looked like the surface of disturbed water. So I tried to lean into that aesthetic. I needed to transform this ugly aggregate distance texture into something with some color. To do this, I made a simple shader to look up a color based on the distance. After this I set up some simple logic for spawning and killing boids, and here is my first test of a splash.
+			</p>
+			<div class="polaroid">
+				<img class="desktop" src="../img/boidsAndNoise/firstSplashSmall.gif" style="width: 20vw">
+				<img class="mobile" src="../img/boidsAndNoise/firstSplashSmall.gif" style="width: 60vw">
+				<p> Splash... </p>
+			</div>
+			<div class="imageAndText desktop">
+				<p>
+			At this point the surface of the water was looking pretty plain when there wasn’t any disturbance so I wanted to add some constant noise to make a toony looking water. I wanted to use perlin noise. To get this started I ripped and modified some code from another <a href="https://fancyfennec.medium.com/perlin-noise-and-untiy-compute-shaders-f00736a002a4">fantastic write up.</a>
+			<br>
+			Perlin noise operates by using a 2d array of randomly positioned vectors and smoothly interpolating between them. This works great for creating a still image, but the water needed some movement. I added a tweakable parameter called <i>turbulence</i> that would initialize a texture with a bunch of random values with a range of 2*<i>turbulence.</i> Then at each frame, a compute shader would rotate each gradient in the list to add random and repeatable motion to the noise. Then I used the same lookup I did for the boid distance and got a water texture!
+				</p>
+				<div class="polaroid">
+					<img src="../img/boidsAndNoise/perlinVectors.png" style="width: 25vh">
+					<p> <a href="https://longwelwind.net/blog/perlin-noise"> Source</a></p>
+				</div>
+			</div>
+			<!-- Mobile Elements -->
+			<p class="mobile">
+				At this point the surface of the water was looking pretty plain when there wasn’t any disturbance so I wanted to add some constant noise to make a toony looking water. I wanted to use perlin noise. To get this started I ripped and modified some code from another <a href="https://fancyfennec.medium.com/perlin-noise-and-untiy-compute-shaders-f00736a002a4">fantastic write up.</a>
+				<br>
+				Perlin noise operates by using a 2d array of randomly positioned vectors and smoothly interpolating between them. This works great for creating a still image, but the water needed some movement. I added a tweakable parameter called <i>turbulence</i> that would initialize a texture with a bunch of random values with a range of 2*<i>turbulence.</i> Then at each frame, a compute shader would rotate each gradient in the list to add random and repeatable motion to the noise. Then I used the same lookup I did for the boid distance and got a water texture!
+			</p>
+			<div class="polaroid mobile">
+				<img src="../img/boidsAndNoise/perlinVectors.png" style="width: 40vw">
+				<p> <a href="https://longwelwind.net/blog/perlin-noise"> Source</a></p>
+			</div>
+			<!---->
+			<div class="polaroid">
+				<img class="desktop" src="../img/boidsAndNoise/waterFirst.gif" style="width: 45vw">
+				<img class="mobile" src="../img/boidsAndNoise/waterFirst.gif" style="width: 70vw">
+				<p> Cartoon Water Surface </p>
+			</div>
+			<div class="imageAndText desktop">
+				<div class="polaroid">
+					<img src="../img/boidsAndNoise/cutOffFunction.gif" style="width: 15vw">
+					<p> Scaling Cutoff Function </p>
+				</div>
+				<div style="padding-left:10px; display:flex; align-items:center; flex-direction: column;">
+					<p>
+						Now I needed to mix the boid texture and the water texture together. To do this I created a drop off function. I used the same function for smoothly interpolating values and added a tweakable parameter for the steepness of the drop off. This polynomial function is awesome because its second derivative at y=1 will always be zero making it the perfect choice for smoothly transitioning between 0 and 1. However, because of the scale I added, the function would continue past x=1 so I added a cutoff for anything higher than y=1.
+						<br><br>
+					</p>
+					<img src="../img/boidsAndNoise/cutoffEquation.png" style="width: 40%">
+				</div>
+			</div>
+			<!-- Mobile Elements -->
+			<p class="mobile">
+				Now I needed to mix the boid texture and the water texture together. To do this I created a drop off function. I used the same function for smoothly interpolating values and added a tweakable parameter for the steepness of the drop off. This polynomial function is awesome because its second derivative at y=1 will always be zero making it the perfect choice for smoothly transitioning between 0 and 1. However, because of the scale I added, the function would continue past x=1 so I added a cutoff for anything higher than y=1.
+				<br><br>
+			</p>
+			<img class="mobile" src="../img/boidsAndNoise/cutoffEquation.png" style="width: 80vw;">
+			<div class="polaroid mobile">
+				<img src="../img/boidsAndNoise/cutOffFunction.gif" style="width: 70vw">
+				<p> Scaling Cutoff Function </p>
+			</div>
+			<!---->
+
+			<p>
+				Using this drop off function I can now smoothly add the boids to the noise texture. Here’s the player's movable boat creating a wake. I also added some logic to translate the noise if the user is moving while touching a boundary. From here I added a player movable boat styled like a destroyer, a cannon ball for some flair, and a shader to pixelate everything and make it seem retro.
+			</p>
+			<div id="multiPhotos">
+				<img class="desktop" style="height: 50vh;" src="../img/boidsAndNoise/wake01.gif">
+				<img class="mobile" style="width: 60vw;" src="../img/boidsAndNoise/wake01.gif">
+				<img class="desktop" style="height: 50vh;" src="../img/boidsAndNoise/cannonBall.gif">
+				<img class="mobile" style="width: 60vw;" src="../img/boidsAndNoise/cannonBall.gif">
+			</div>
+			<p>
+				In hindsight I don’t think the boids are super necessary because their lifetimes are so short. I think I could produce a similar effect with just random velocity points. In the future I want to add some pirates that will come at the player that the player can destroy for points. Here’s a picture of me on an actual destroyer.
+			</p>
+			<div class="polaroid">
+				<img src="../img/boidsAndNoise/onABoatSmall.jpg" style="width: 50vw">
+				<p>Boom!</p>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="footerBar desktop">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+		<div class="footerBar mobile">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+  </body>
+	<div id="loading">
+	</div>
+</html>
+<script src="../../assets/js/typeWriter.js"></script>
+<script src="../../assets/js/hover.js"></script>
+<script src="../../assets/js/mobileSwitching.js"></script>

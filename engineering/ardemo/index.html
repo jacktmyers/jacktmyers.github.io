@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>AR Demo</title>
+		<link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/desktop.css" />
+	</head>
+    <body>
+ 		<div class = "homeBar">
+			<a href = "https://www.jacktmyers.com">
+				<img src="../../assets/img/websiteName.png"
+				alt="JACKTMYERS.COM"
+				onmouseover="hover(this);"
+				onmouseout="hoverOut(this);"
+				>
+			</a>
+		</div>
+		<div class="description">
+			<div id="fancyHeader" class="desktop">
+				<h1 class="typed" id="AR Demo"></h1>
+				<img src="../../assets/img/fancy17.png">
+				<img src="../../assets/img/fancy26.png">
+				<img src="../../assets/img/fancy1.png">
+			</div>
+			<div id="fancyHeader" class="mobile">
+				<img src="../../assets/img/fancy17.png">
+				<img src="../../assets/img/fancy26.png">
+				<img src="../../assets/img/fancy1.png">
+			</div>
+			<h1 class="typed mobile" id="AR Demo"></h1>
+			<p class="pinkP">At work I created an augmented reality demo to be used with the Hololens 2 and the Magic Leap 2. The tech stack I used was:</p>
+			<ul>
+				<li>* Unity 3D</li>
+				<li>* Mixed Reality Toolkit 3 (MRTK3)</li>
+				<li>* Vuforia Engine</li>
+			</ul>
+			<p>
+				<br>
+				The coolest feature in the demo was the 3D object detection. I used Vuforia to accomplish this, which requires a 3D model of the object you wish to detect.
+			</p>
+			<div id="multiPhotos">
+				<img class="desktop" src="../img/ardemo/dmmInTheFlesh.jpg" style="height: 30vh;">
+				<img class="mobile" src="../img/ardemo/dmmInTheFlesh.jpg" style="width: 60vw;">
+				<img class="desktop" src="../img/ardemo/dmmBlender.png" style="height: 30vh;">
+				<img class="mobile" src="../img/ardemo/dmmBlender.png" style="width: 60vw;">
+				<img class="desktop" src="../img/ardemo/dmmScan.jpg" style="height: 30vh;">
+				<img class="mobile" src="../img/ardemo/dmmScan.jpg" style="width: 60vw;">
+			</div>
+			<p>
+				Another team scanned my objects and put together a CAD model. I then took that model and colored it for details using Blender. A few other models were scanned but the multimeter performed the best because of its many intricate details. Here is a video of me testing the detection from my webcam.
+			</p>
+			<div class="polaroid">
+				<img class="desktop" src="../img/ardemo/detecting.gif" style="width: 60vw">
+				<img class="mobile" src="../img/ardemo/detecting.gif" style="width: 80vw">
+				<p> Pose Estimation of Multimeter </p>
+			</div>
+			<p style="text-align: center;">
+				To cover my butt I am going to leave the rest out. Here are just a few other photos:
+			</p>
+			<div id="multiPhotos">
+				<div class="polaroid">
+					<img class="desktop" src="../img/ardemo/tmWindow.jpg" style="height: 30vh;">
+					<img class="mobile" src="../img/ardemo/tmWindow.jpg" style="width: 60vw;">
+					<p>Movable PDF Window</p>
+				</div>
+				<div class="polaroid">
+					<img class="desktop" src="../img/ardemo/dmmQR.jpg" style="height: 30vh;">
+					<img class="mobile" src="../img/ardemo/dmmQR.jpg" style="width: 60vw;">
+					<p>QR Code Scanning</p>
+				</div>
+				<div class="polaroid">
+					<img class="desktop" src="../img/ardemo/handMenu.jpg" style="height: 30vh;">
+					<img class="mobile" src="../img/ardemo/handMenu.jpg" style="width: 60vw;">
+					<p>Hand Menu</p>
+				</div>
+				<div class="polaroid">
+					<img class="desktop" src="../img/ardemo/positionTemp.jpg" style="height: 30vh;">
+					<img class="mobile" src="../img/ardemo/positionTemp.jpg" style="width: 60vw;">
+					<p>Bounding Box Positioning</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="footerBar desktop">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+		<div class="footerBar mobile">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+  </body>
+	<div id="loading">
+	</div>
+</html>
+<script src="../../assets/js/typeWriter.js"></script>
+<script src="../../assets/js/hover.js"></script>
+<script src="../../assets/js/mobileSwitching.js"></script>
