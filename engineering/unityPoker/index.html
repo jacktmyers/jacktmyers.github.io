@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Unity Poker</title>
+		<link rel="shortcut icon" type="image/png" href="../../assets/img/favicon.png">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/desktop.css" />
+	</head>
+    <body>
+ 		<div class = "homeBar">
+			<a href = "https://www.jacktmyers.com">
+				<img src="../../assets/img/websiteName.png"
+				alt="JACKTMYERS.COM"
+				onmouseover="hover(this);"
+				onmouseout="hoverOut(this);"
+				>
+			</a>
+		</div>
+		<div class="description">
+			<div id="fancyHeader" class="desktop">
+				<h1 class="typed" id="Unity Poker"></h1>
+				<img src="../../assets/img/fancy29.png">
+				<img src="../../assets/img/fancy0.png">
+				<img src="../../assets/img/fancy28.png">
+			</div>
+			<div id="fancyHeader" class="mobile">
+				<img src="../../assets/img/fancy29.png">
+				<img src="../../assets/img/fancy0.png">
+				<img src="../../assets/img/fancy28.png">
+			</div>
+			<h1 class="typed mobile" id="Unity Poker"></h1>
+			<p id="intro"> 
+				Unity poker is a simple Unity game I made for a job interview. The game has two game modes: Black Jack and Jacks or Higher. The rules of Black Jack are standard.
+			</p>
+			<p class="pinkP"><br>Jacks or Higher is played like this:</p>
+			<ul>
+				<li>* The User Gets Dealt 5 Cards</li>
+				<li>* The user picks any amount of cards to keep and the rest are replaced</li>
+				<li>* If the final hand beats a pair of jacks the bet is won</li>
+			</ul>
+			<p>
+				<br>
+				Pretty simple game and standard aesthetics. The cards are constructed using a combination of three sprites. The number, the suit and the background:
+			</p>
+			<div class="polaroid">
+				<img class="desktop" src="../img/unityPoker/cardCombo.png" style="width: 40vw">
+				<img class="mobile" src="../img/unityPoker/cardCombo.png" style="width: 60vw">
+				<p>Construction of the Ace of Spades</p>
+			</div>
+			<p>
+				The other notable feature is the smooth card movement.The cards don’t move by setting their location. Instead their final location is set as a field and each frame a new intermediate location is set based on a linear interpolation of the current position and then new one. The lerp amount is a tweakable parameter.
+				<br><br>
+				The bulk of the work after this was the logic required to deal cards, check for poker hands, and assign winnings.
+			</p>
+			<p class="pinkP">
+				<br>
+				Here’s some gameplay:
+			</p>
+			<div id="multiPhotos">
+				<img class="desktop" style="height: 30vw;" src="../img/unityPoker/blackJack.gif">
+				<img class="mobile" style="width: 80vw;" src="../img/unityPoker/blackJack.gif">
+				<img class="desktop" style="height: 30vw;" src="../img/unityPoker/jacksLoss.gif">
+				<img class="mobile" style="width: 80vw;" src="../img/unityPoker/jacksLoss.gif">
+				<img class="desktop" style="height: 30vw;" src="../img/unityPoker/jacksWin.gif">
+				<img class="mobile" style="width: 80vw;" src="../img/unityPoker/jacksWin.gif">
+			</div>
+		</div>
+
+		<!-- FOOTER -->
+		<div class="footerBar desktop">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+		<div class="footerBar mobile">
+			<div id="sourceCode">
+				<p>See the&#160;</p> <a href="https://github.com/jacktmyers/jacktmyers.github.io"><p>SOURCE CODE.</p></a>
+			</div>
+			<div id = "socials">
+				<a href="https://www.linkedin.com/in/jack-myers-aab6811b6">
+					<img id="linkedin" 
+					src="../../assets/img/linkedInLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+					</a>
+				<a href="https://github.com/jacktmyers">
+					<img id="github"
+					src="../../assets/img/githubLogo.png"
+					onmouseover="hover(this);"
+					onmouseout="hoverOut(this);"
+					>
+				</a>
+			</div>
+		</div>
+  </body>
+	<div id="loading">
+	</div>
+</html>
+<script src="../../assets/js/typeWriter.js"></script>
+<script src="../../assets/js/hover.js"></script>
+<script src="../../assets/js/mobileSwitching.js"></script>

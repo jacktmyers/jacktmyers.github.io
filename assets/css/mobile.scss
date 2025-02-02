@@ -19,6 +19,13 @@ $pinkColor: #ffa4a4;
   z-index: 99;
 }
 
+a {
+  color: $pinkColor;
+}
+a:hover {
+  color: white;
+}
+
 // Global Background and Font
 body {
   font-family: imbVga;
@@ -252,7 +259,7 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	display: flex;
-	width: fit-content;
+  padding: 6vw;
 	flex-direction: column;
 	margin-bottom: 0;
 	#gallery {
@@ -372,6 +379,10 @@ $descriptionWidth: 90vw;
 			border: $mobileBorder;
 			margin: 1vh;
 		}
+    .polaroid {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
 	}
 	.polaroid {
 		display: flex;

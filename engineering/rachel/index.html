@@ -49,19 +49,19 @@
 				<li>* A RGB camera, to track the ball.</li>
 			</ul>
 			<div id="multiPhotos">
-				<img class="desktop" src="img/800x800/moneyShot.jpg">
-				<img class="mobile" src="img/800x800/moneyShot.jpg" style="width: 70vw">
-				<img class="desktop" src="img/800x800/tower.jpg">
-				<img class="mobile" src="img/800x800/tower.jpg" style="height: 50vw">
-				<img class="desktop" src="img/gamePlay.jpg">
-				<img class="mobile" src="img/gamePlay.jpg" style="width: 70vw">
+				<img class="desktop" src="../img/rachel/800x800/moneyShot.jpg">
+				<img class="mobile" src="../img/rachel/800x800/moneyShot.jpg" style="width: 70vw">
+				<img class="desktop" src="../img/rachel/800x800/tower.jpg">
+				<img class="mobile" src="../img/rachel/800x800/tower.jpg" style="height: 50vw">
+				<img class="desktop" src="../img/rachel/gamePlay.jpg">
+				<img class="mobile" src="../img/rachel/gamePlay.jpg" style="width: 70vw">
 			</div>
 			<p class= "pinkP">Here’s a bit more for the nerdy folks:</p>
 			<p>
 				I worked primarily on game logic and ball tracking. Boy is it annoying to track a fast moving ping pong ball. Because we used color filtering to determine where the ball was, we had to use a specifically colored ball and fine tune the filter to match that color. Additionally, the filter had to be tweaked to fit the specific environment R.A.C.H.E.L. was set up in. For all the fancy shmancy image processing and for the dead simple UI, we used OpenCVs C++ library.
 			</p>
 			<div class="polaroid">
-				<img src="img/filters.png" style="width: 85vw">
+				<img src="../img/rachel/filters.png" style="width: 85vw">
 				<p> Real Image, Color Filter and Contour Detection to Track the Ball </p>
 			</div>
 			<p>
@@ -70,13 +70,13 @@
 			<div class="imageAndText desktop">
 				<p>The game logic was the following: if the ball bounces twice on one side BOOM, point scored. If the ball bounced once on one side and then there were no bounces for a certain amount of time (this was a tweakable parameter) BOOM, point scored. If the ball bounced in a square, that hadn’t been hit the square would be removed. If the ball bounced in a square that had already been hit BOOM, point scored.
 				</p>
-				<img class="rightPhoto" src="img/fallingFloor.gif">
+				<img class="rightPhoto" src="../img/rachel/fallingFloor.gif">
 			</div>
 			<!-- Mobile Elements -->
 			<p class="mobile"><br>The game logic was the following: if the ball bounces twice on one side BOOM, point scored. If the ball bounced once on one side and then there were no bounces for a certain amount of time (this was a tweakable parameter) BOOM, point scored. If the ball bounced in a square, that hadn’t been hit the square would be removed. If the ball bounced in a square that had already been hit BOOM, point scored.
 			</p>
 			<div class="polaroid mobile">
-				<img src="img/fallingFloor.gif" style="width: 60vw;">
+				<img src="../img/rachel/fallingFloor.gif" style="width: 60vw;">
 				<p>Demo Showing the Floor Falling Functionality</p>
 			</div>
 			<!---->
@@ -84,7 +84,7 @@
 				Communication between the microcontroller and the laptop was through UART and the message we sent was a byte in length, telling if there was a button press on the keypad, a bounce, what side it was on, and a few error codes.
 			</p>
 			<div class="imageAndText desktop">
-				<img class="leftPhoto desktop" src="img/800x800/keypad.jpg">
+				<img class="leftPhoto desktop" src="../img/rachel/800x800/keypad.jpg">
 				<p>The microcontroller was a STM32 and all the programming was done in C (shoutout to my boy Micah). The code compared signal strengths from the four microphones to decide which side the ball bounced on. The PCB (shoutout to my boy Bartosz) had interfaces for the button matrix for multiplexing and screw heads for the microphones to be attached. Each microphone had its own analog filter to clean up the signals and remove some noise. The environment we used on the laptop was linux (of course) and we needed a bit of code to properly get frames from the RGB camera. This was set up by my boy James. 
 				</p>
 			</div>
@@ -92,7 +92,7 @@
 			<p class="mobile"><br>The microcontroller was a STM32 and all the programming was done in C (shoutout to my boy Micah). The code compared signal strengths from the four microphones to decide which side the ball bounced on. The PCB (shoutout to my boy Bartosz) had interfaces for the button matrix for multiplexing and screw heads for the microphones to be attached. Each microphone had its own analog filter to clean up the signals and remove some noise. The environment we used on the laptop was linux (of course) and we needed a bit of code to properly get frames from the RGB camera. This was set up by my boy James. 
 			</p>
 			<div class="polaroid mobile">
-				<img src="img/800x800/keypad.jpg" style="width: 60vw;">
+				<img src="../img/rachel/800x800/keypad.jpg" style="width: 60vw;">
 				<p>Keypad Matrix and PCB Mounted to the Table</p>
 			</div>
 			<!---->
@@ -100,11 +100,11 @@
 				If you read this far you are definitely a nerd, so here's a little surprise for you. BOOM it’s a cat.
 			</p>
 			<div class="polaroid mobile">
-				<img src="img/awkwardCat.jpg" style="height: 30vw">
+				<img src="../img/rachel/awkwardCat.jpg" style="height: 30vw">
 				<p>Meow</p>
 			</div>
 			<div class="polaroid desktop">
-				<img src="img/awkwardCat.jpg" style="height: 30vh">
+				<img src="../img/rachel/awkwardCat.jpg" style="height: 30vh">
 				<p>Meow</p>
 			</div>
 		</div>

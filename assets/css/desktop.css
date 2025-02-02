@@ -14,6 +14,14 @@
   z-index: 99;
 }
 
+a {
+  color: #ffa4a4;
+}
+
+a:hover {
+  color: white;
+}
+
 body {
   font-family: imbVga;
   color: white;
@@ -308,20 +316,11 @@ html, body {
   margin-right: 5px;
 }
 .content #gallery .polaroid p {
+  font-size: 4.25vh;
   margin-top: 1vh;
   width: 100%;
   text-align: center;
   margin-left: 5px;
-}
-@media (max-height: 500px) {
-  .content #gallery .polaroid p {
-    font-size: 4vh;
-  }
-}
-@media (min-height: 500px) {
-  .content #gallery .polaroid p {
-    font-size: 2vh;
-  }
 }
 .content #gallery a:link {
   color: white;
@@ -483,6 +482,10 @@ html, body {
   padding: 1vh;
   border: 0.5vh solid;
   margin: 1vh;
+}
+.description #multiPhotos .polaroid {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .description .polaroid {
   display: flex;
