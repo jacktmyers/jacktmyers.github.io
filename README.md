@@ -1,4 +1,4 @@
 # Personal Website
-This is a (mostly) static website. Enjoy.
+This is my static website/cv. Enjoy.
 
 www.jacktmyers.com
